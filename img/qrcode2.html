@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://qr.io/dashboard/edit-colorandshape/bNTVoc -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="A5CLP8SR1" name="slack-app-id">
+
+      <title>Edit Color and Shape | Dashboard</title>
+          <!-- Primary Meta Tags -->
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="author" content="QR">
+      <link rel="canonical" href="https://qr.io/">
+      <meta name="description" content="QR.io | QR Code Generator">
+      <meta name="keywords" content="qr code, qr codes, qr, qr generator, qr code generator, generate qr code, static qr codes, dynamic qr codes, create qr code">
+      <meta itemprop="image" content="https://qr.io/logo/logo-title.png">
+
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="/">
+      <meta property="og:title" content="Edit Color and Shape | Dashboard">
+      <meta property="og:description" content="QR.io | QR Code Generator">
+      <meta property="og:image" content="https://qr.io/logo/logo-title.png">
+
+      <!-- Twitter -->
+      <meta property="twitter:card" content="summary_large_image">
+      <meta property="twitter:url" content="/">
+      <meta property="twitter:title" content="QR.io | Generate QR Codes">
+      <meta property="twitter:description" content="Generate unlimited QR codes and keep track of how many people scan them, from where and on what date.">
+      <meta property="twitter:image" content="https://qr.io/logo/logo-title.png">
+
+      <!-- Favicon -->
+      <link rel="apple-touch-icon" sizes="120x120" href="https://qr.io/qrfav/favicon-120-precomposed.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://qr.io/qrfav/favicon-32.png">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="theme-color" content="#ffffff">
+
+      <!-- Fontawesome -->
+      <!-- <link type="text/css" href="https://qr.io/node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet"> -->
+      <link href="./qrcode2_files/all.css" rel="stylesheet">
+
+      <!-- Prism -->
+      <link type="text/css" href="./qrcode2_files/prism.css" rel="stylesheet">
+
+      <!-- Leaf CSS -->
+      <link type="text/css" href="./qrcode2_files/leaf.css" rel="stylesheet">
+
+      <!-- axios -->
+      <script type="text/javascript" async="" src="./qrcode2_files/analytics.js.download"></script><script type="text/javascript" async="" src="./qrcode2_files/js"></script><script src="./qrcode2_files/axios.min.js.download"></script>
+
+      <!-- Core -->
+      <script src="./qrcode2_files/jquery.min.js.download"></script>
+      <script src="./qrcode2_files/popper.min.js.download"></script>
+      <script src="./qrcode2_files/bootstrap.min.js.download"></script>
+      <!-- <script src="../node_modules/headroom.js/dist/headroom.min.js"></script> -->
+
+      <!-- Vendor JS -->
+      <!-- <script src="https://qr.io/node_modules/countup.js/dist/countUp.min.js"></script> -->
+      <script src="./qrcode2_files/jquery.countdown.min.js.download"></script>
+      <script src="./qrcode2_files/smooth-scroll.polyfills.min.js.download"></script>
+      <script src="./qrcode2_files/prism.js.download"></script>
+
+      <!-- Leaf JS -->
+      <script src="./qrcode2_files/leaf.js.download"></script>
+      <script src="./qrcode2_files/all.js.download"></script>
+
+      <!-- GOOGLE ANALYTICS -->
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async="" src="./qrcode2_files/js(1)"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180803381-1');
+      </script>
+
+      <!-- WHOSAMUNG -->
+      <style type="text/css">.apexcharts-canvas {
+  position: relative;
+  user-select: none;
+  /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
+}
+
+
+/* scrollbar is not visible by default for legend, hence forcing the visibility */
+.apexcharts-canvas ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+}
+
+.apexcharts-canvas ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+.apexcharts-inner {
+  position: relative;
+}
+
+.apexcharts-text tspan {
+  font-family: inherit;
+}
+
+.legend-mouseover-inactive {
+  transition: 0.15s ease all;
+  opacity: 0.20;
+}
+
+.apexcharts-series-collapsed {
+  opacity: 0;
+}
+
+.apexcharts-tooltip {
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px -4px #999;
+  cursor: default;
+  font-size: 14px;
+  left: 62px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 12;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+  border: 1px solid #e3e3e3;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark {
+  color: #fff;
+  background: rgba(30, 30, 30, 0.8);
+}
+
+.apexcharts-tooltip * {
+  font-family: inherit;
+}
+
+
+.apexcharts-tooltip-title {
+  padding: 6px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  background: #ECEFF1;
+  border-bottom: 1px solid #ddd;
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-title {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid #333;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.apexcharts-tooltip-text-z-label:empty,
+.apexcharts-tooltip-text-z-value:empty {
+  display: none;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  font-weight: 600;
+}
+
+.apexcharts-tooltip-marker {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 0px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.apexcharts-tooltip-series-group {
+  padding: 0 10px;
+  display: none;
+  text-align: left;
+  justify-content: left;
+  align-items: center;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-marker {
+  opacity: 1;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active,
+.apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 4px;
+}
+
+.apexcharts-tooltip-series-group-hidden {
+  opacity: 0;
+  height: 0;
+  line-height: 0;
+  padding: 0 !important;
+}
+
+.apexcharts-tooltip-y-group {
+  padding: 6px 0 5px;
+}
+
+.apexcharts-tooltip-candlestick {
+  padding: 4px 8px;
+}
+
+.apexcharts-tooltip-candlestick>div {
+  margin: 4px 0;
+}
+
+.apexcharts-tooltip-candlestick span.value {
+  font-weight: bold;
+}
+
+.apexcharts-tooltip-rangebar {
+  padding: 5px 8px;
+}
+
+.apexcharts-tooltip-rangebar .category {
+  font-weight: 600;
+  color: #777;
+}
+
+.apexcharts-tooltip-rangebar .series-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.apexcharts-xaxistooltip {
+  opacity: 0;
+  padding: 9px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-xaxistooltip:after,
+.apexcharts-xaxistooltip:before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-xaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-left: -6px;
+}
+
+.apexcharts-xaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-left: -7px;
+}
+
+.apexcharts-xaxistooltip-bottom:after,
+.apexcharts-xaxistooltip-bottom:before {
+  bottom: 100%;
+}
+
+.apexcharts-xaxistooltip-top:after,
+.apexcharts-xaxistooltip-top:before {
+  top: 100%;
+}
+
+.apexcharts-xaxistooltip-bottom:after {
+  border-bottom-color: #ECEFF1;
+}
+
+.apexcharts-xaxistooltip-bottom:before {
+  border-bottom-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:after {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:before {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top:after {
+  border-top-color: #ECEFF1
+}
+
+.apexcharts-xaxistooltip-top:before {
+  border-top-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:after {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:before {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-yaxistooltip {
+  opacity: 0;
+  padding: 4px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+}
+
+.apexcharts-yaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-yaxistooltip:after,
+.apexcharts-yaxistooltip:before {
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-yaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.apexcharts-yaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+.apexcharts-yaxistooltip-left:after,
+.apexcharts-yaxistooltip-left:before {
+  left: 100%;
+}
+
+.apexcharts-yaxistooltip-right:after,
+.apexcharts-yaxistooltip-right:before {
+  right: 100%;
+}
+
+.apexcharts-yaxistooltip-left:after {
+  border-left-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-left:before {
+  border-left-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:after {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:before {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right:after {
+  border-right-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-right:before {
+  border-right-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:after {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:before {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip.apexcharts-active {
+  opacity: 1;
+}
+
+.apexcharts-yaxistooltip-hidden {
+  display: none;
+}
+
+.apexcharts-xcrosshairs,
+.apexcharts-ycrosshairs {
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xcrosshairs.apexcharts-active,
+.apexcharts-ycrosshairs.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-ycrosshairs-hidden {
+  opacity: 0;
+}
+
+.apexcharts-selection-rect {
+  cursor: move;
+}
+
+.svg_select_boundingRect, .svg_select_points_rot {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.apexcharts-selection-rect + g .svg_select_boundingRect,
+.apexcharts-selection-rect + g .svg_select_points_rot {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.apexcharts-selection-rect + g .svg_select_points_l,
+.apexcharts-selection-rect + g .svg_select_points_r {
+  cursor: ew-resize;
+  opacity: 1;
+  visibility: visible;
+}
+
+.svg_select_points {
+  fill: #efefef;
+  stroke: #333;
+  rx: 2;
+}
+
+.apexcharts-svg.apexcharts-zoomable.hovering-zoom {
+  cursor: crosshair
+}
+
+.apexcharts-svg.apexcharts-zoomable.hovering-pan {
+  cursor: move
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon,
+.apexcharts-reset-icon,
+.apexcharts-pan-icon,
+.apexcharts-selection-icon,
+.apexcharts-menu-icon,
+.apexcharts-toolbar-custom-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 24px;
+  color: #6E8192;
+  text-align: center;
+}
+
+.apexcharts-zoom-icon svg,
+.apexcharts-zoomin-icon svg,
+.apexcharts-zoomout-icon svg,
+.apexcharts-reset-icon svg,
+.apexcharts-menu-icon svg {
+  fill: #6E8192;
+}
+
+.apexcharts-selection-icon svg {
+  fill: #444;
+  transform: scale(0.76)
+}
+
+.apexcharts-theme-dark .apexcharts-zoom-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomin-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomout-icon svg,
+.apexcharts-theme-dark .apexcharts-reset-icon svg,
+.apexcharts-theme-dark .apexcharts-pan-icon svg,
+.apexcharts-theme-dark .apexcharts-selection-icon svg,
+.apexcharts-theme-dark .apexcharts-menu-icon svg,
+.apexcharts-theme-dark .apexcharts-toolbar-custom-icon svg {
+  fill: #f3f4f5;
+}
+
+.apexcharts-canvas .apexcharts-zoom-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-selection-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-reset-zoom-icon.apexcharts-selected svg {
+  fill: #008FFB;
+}
+
+.apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
+.apexcharts-theme-light .apexcharts-zoomout-icon:hover svg,
+.apexcharts-theme-light .apexcharts-reset-icon:hover svg,
+.apexcharts-theme-light .apexcharts-menu-icon:hover svg {
+  fill: #333;
+}
+
+.apexcharts-selection-icon,
+.apexcharts-menu-icon {
+  position: relative;
+}
+
+.apexcharts-reset-icon {
+  margin-left: 5px;
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-reset-icon,
+.apexcharts-menu-icon {
+  transform: scale(0.85);
+}
+
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon {
+  transform: scale(0.7)
+}
+
+.apexcharts-zoomout-icon {
+  margin-right: 3px;
+}
+
+.apexcharts-pan-icon {
+  transform: scale(0.62);
+  position: relative;
+  left: 1px;
+  top: 0px;
+}
+
+.apexcharts-pan-icon svg {
+  fill: #fff;
+  stroke: #6E8192;
+  stroke-width: 2;
+}
+
+.apexcharts-pan-icon.apexcharts-selected svg {
+  stroke: #008FFB;
+}
+
+.apexcharts-pan-icon:not(.apexcharts-selected):hover svg {
+  stroke: #333;
+}
+
+.apexcharts-toolbar {
+  position: absolute;
+  z-index: 11;
+  max-width: 176px;
+  text-align: right;
+  border-radius: 3px;
+  padding: 0px 6px 2px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apexcharts-menu {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+  right: 10px;
+  opacity: 0;
+  min-width: 110px;
+  transition: 0.15s ease all;
+  pointer-events: none;
+}
+
+.apexcharts-menu.apexcharts-menu-open {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-menu-item {
+  padding: 6px 7px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.apexcharts-theme-light .apexcharts-menu-item:hover {
+  background: #eee;
+}
+
+.apexcharts-theme-dark .apexcharts-menu {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .apexcharts-canvas:hover .apexcharts-toolbar {
+    opacity: 1;
+  }
+}
+
+.apexcharts-datalabel.apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-pie-label,
+.apexcharts-datalabels,
+.apexcharts-datalabel,
+.apexcharts-datalabel-label,
+.apexcharts-datalabel-value {
+  cursor: default;
+  pointer-events: none;
+}
+
+.apexcharts-pie-label-delay {
+  opacity: 0;
+  animation-name: opaque;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.apexcharts-canvas .apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-hide .apexcharts-series-points {
+  opacity: 0;
+}
+
+.apexcharts-gridline,
+.apexcharts-annotation-rect,
+.apexcharts-tooltip .apexcharts-marker,
+.apexcharts-area-series .apexcharts-area,
+.apexcharts-line,
+.apexcharts-zoom-rect,
+.apexcharts-toolbar svg,
+.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-radar-series path,
+.apexcharts-radar-series polygon {
+  pointer-events: none;
+}
+
+
+/* markers */
+
+.apexcharts-marker {
+  transition: 0.15s ease all;
+}
+
+@keyframes opaque {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Resize generated styles */
+
+@keyframes resizeanim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.resize-triggers {
+  animation: 1ms resizeanim;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.resize-triggers,
+.resize-triggers>div,
+.contract-trigger:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resize-triggers>div {
+  background: #eee;
+  overflow: auto;
+}
+
+.contract-trigger:before {
+  width: 200%;
+  height: 200%;
+}</style><style type="text/css">.anima-enter[data-v-3f1ba458]{opacity:0}.anima-enter-active[data-v-3f1ba458]{transition:opacity .2s;animation:slidein-data-v-3f1ba458 .2s ease-out forwards}.anima-leave-active[data-v-3f1ba458]{transition:opacity .2s;opacity:0;animation:slideout-data-v-3f1ba458 .2s ease-out forwards}.detractor[data-v-3f1ba458]:hover{background:#f44436!important;border-color:#f55b4e!important;color:#fff!important}.passive[data-v-3f1ba458]:hover{background:#f47c01!important;border-color:#ff8f27!important;color:#fff!important}.promoter[data-v-3f1ba458]:hover{background:#4daf4f!important;border-color:#5cb860!important;color:#fff!important}.apretadodetractor[data-v-3f1ba458]{border-color:#f55b4e!important;background:#f44536!important;color:#fff!important}.apretadopassive[data-v-3f1ba458]{border-color:#ff8f27!important;background:#f47b02!important;color:#fff!important}.apretadopromoter[data-v-3f1ba458]{border-color:#5cb860!important;background:#4faf4f!important;color:#fff!important}@media (max-width:767px){#tucutucupampam[data-v-3f1ba458]{width:100%!important}.tucutucupampambtn[data-v-3f1ba458]{font-size:12px!important;font-weight:700!important}.enmobilenomostrarpumpum[data-v-3f1ba458]{display:none!important}}.anima-enter[data-v-3f1ba458]{opacity:0!important}.anima-enter-active[data-v-3f1ba458]{transition:opacity .2s!important;animation:slidein-data-v-3f1ba458 .2s ease-out forwards!important}.anima-leave-active[data-v-3f1ba458]{transition:opacity .2s!important;opacity:0!important;animation:slideout-data-v-3f1ba458 .2s ease-out forwards!important}@keyframes slidein-data-v-3f1ba458{0%{transform:translateY(-20px)!important}to{transform:translateY(0)!important}}@keyframes slideout-data-v-3f1ba458{0%{transform:translateY(0)!important}to{transform:translateY(20px)!important}}@media (max-width:767px){.review_widget_mobile[data-v-3f1ba458]{width:100%!important}}[v-cloak][data-v-3f1ba458]{display:none}</style><style type="text/css">@media (max-width:991px){.megamenu-item{max-width:none!important;width:100%!important}.featuresdiv{max-width:100%!important}.sinmargin{margin:0 auto!important;width:100%!important}.elmaildash{float:unset!important;margin-top:10px}}@media (max-width:829px){.nopagonav{top:119px!important}}@media (max-width:399px){.fiumfiummcqueen{padding-top:15px}}@media (min-width:992px){.p-none{display:none!important}}.navbar-brand img{max-width:120px;width:100%}.navbar{background-color:#13aa7c}.navimg{width:30px}.megamenu-item{display:inline-block!important;max-width:250px}.megamenu-item2{display:inline-block!important;max-width:1000px;margin-bottom:-30px}.list2{font-size:18px}.list3{font-size:14px!important;color:#000;font-weight:500}.featuresdiv{width:758px!important}.list-style-none{display:flex}.mb90{margin-bottom:-10px!important}.wwa{background-color:#fff;border:2px solid #0948b3;color:#0948b3!important}.divnav{margin:0 auto!important}@media (min-width:991px){.mindesktopwidth{width:500px!important}.webkitinlinedesktop{display:-webkit-inline-box}.paddingendesktop1{padding:0 0 0 10px}.paddingendesktop2{padding:0 10px 0 0}}.login-button{color:#fff;font-weight:600;background-color:transparent;padding:15px}.login-button-hov:hover{background-color:transparent!important;color:#c7c7c7!important}.jwoEpG{display:block;width:100%;background-color:#f2f5fa;padding:100px 20px 0}.jPMoWD{max-width:1120px;margin:0 auto}.cbHCIC{font-size:32px;line-height:34px;margin-bottom:2px}.iQGrHz{-webkit-box-align:baseline;align-items:baseline;-webkit-box-pack:justify;justify-content:space-between;border-bottom:1px solid #dde3f0}.iQGrHz,.VvJwP{position:relative;display:flex}.VvJwP{width:72%;-webkit-box-align:center;align-items:center;height:100%}.ceBpjv{color:#262b33}.ceBpjv,.goxPqP{margin-right:24px;cursor:pointer;transition:color .1s ease 0s;padding:10px 0;text-align:center}.goxPqP{color:#292e35}.faWvy{display:block;position:absolute;left:0;bottom:-1px;width:100px;height:2px;background-color:#2196f3;transform-origin:0 0;transform:translateX(0) scaleX(.67);transition:transform .3s ease 0s}.dqUEtJ{background-color:#13aa7c;display:inline-flex;-webkit-box-align:center;align-items:center;position:static;bottom:15px;right:0;padding:8px 12px 8px 4px}.cTABXS,.dqUEtJ{-webkit-appearance:none;text-align:center;color:#fff;cursor:pointer;user-select:none;pointer-events:auto;font-size:16px;line-height:20px;font-weight:600;outline:none;border-radius:4px;transition:background-color .1s ease 0s,box-shadow .1s ease 0s;border-width:0}.cTABXS{background-color:#0948b2;width:100%;margin-bottom:32px;display:none;padding:12px 24px}.WflZx{width:100%;flex-flow:wrap}.jmKqRE{width:100%;display:inline-flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:start;justify-content:flex-start;max-width:524px}.cxEQKQ{margin-right:30px}.haTfuX{position:relative;width:278px;height:278px;background-color:#fff;background-size:cover;cursor:pointer;overflow:hidden;border-radius:4px;transition:box-shadow .2s ease 0s}.kImuof{position:absolute;left:calc(50% - 18px);top:calc(50% - 18px);display:none;width:36px;height:36px;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;color:#fff;background-color:#7a85997a;border-radius:50%}.hCpORs{width:100%;max-width:212px}.fBHvCq{display:flex;align-items:flex-start;padding-right:26px;flex-flow:row nowrap}.cLFOMf,.eRizKN{position:relative;max-width:100%}.eRizKN{font-size:22px;line-height:28px;height:32px;min-width:1px}.kkRCtf{display:block;white-space:nowrap;text-overflow:ellipsis;max-width:100%;overflow:hidden}.gQXEKA{position:absolute;top:2px;left:calc(100% + 2px);-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}.leOORe{position:relative}.dsceFE{font-weight:400;white-space:nowrap;left:50%;transform:translate(-50%);position:absolute;z-index:10;font-size:14px;line-height:16px;letter-spacing:.3px;color:#fff;width:auto;background-color:#262b33;user-select:none;pointer-events:none;opacity:0;bottom:calc(100% + 6px);padding:5px 8px;border-radius:3px;transition:opacity .2s ease 0s,transform .2s ease 0s}.jxPiur{cursor:pointer;color:#b8becc;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center}.hsJJHO{position:absolute;bottom:0;left:0;right:0;height:2px;background-color:#2196f3;pointer-events:none;z-index:1;opacity:0;transform:scale(.5,0);transition:transform .1s ease 0s}.jaiNr{display:flex;-webkit-box-align:center;align-items:center;margin-bottom:16px}.dXstwa:last-child{margin-bottom:0}.dXstwa{font-size:16px;line-height:20px;color:#98a1b3;margin-bottom:8px}.dHZVB{position:relative}.cNyPHU{margin-bottom:12px;cursor:pointer;user-select:none;color:#262b33;pointer-events:all}.bWbDhC,.cNyPHU{display:flex;-webkit-box-align:center;align-items:center}.bWbDhC{-webkit-box-pack:center;justify-content:center;color:#2196f3;margin-right:5px}.cNyPHU:hover{color:#0949b3}@media (max-width:829px){.jwoEpG{padding:30px 20px 0}}@media (max-width:767px){.cbHCIC{margin-bottom:13px}}@media (max-width:767px){.iQGrHz{margin-bottom:20px}}@media (max-width:767px){.VvJwP{-webkit-box-pack:justify;justify-content:space-between}}@media (max-width:767px){.ceBpjv,.goxPqP,.VvJwP{width:100%}}@media (max-width:767px){.cTABXS{display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}}@media (max-width:767px){.jmKqRE{align-items:flex-start;margin-right:0;margin-bottom:32px}}@media (max-width:767px){.cxEQKQ{margin-right:20px}}@media (max-width:767px){.haTfuX{width:108px;height:108px}}@media (max-width:767px){.kImuof{display:flex}}@media (max-width:767px){.mcqueen_desktop{display:none!important}.mcqueen_mobile,.navbar>.container,.navbar>.container-fluid{display:initial!important}.f342fdw{display:block!important}}@media (max-width:992px){.d32jhbd{display:block!important;float:none!important;margin-bottom:23px!important}}.preload:before{content:"";position:absolute;top:0;bottom:0;left:0;right:0;display:block;background:linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.5),hsla(0,0%,100%,0));-webkit-animation:_1IOU .8s linear infinite;animation:_1IOU .8s linear infinite}@-webkit-keyframes _1IOU{0%{-webkit-transform:translateX(-100%);transform:translateX(-100%)}to{-webkit-transform:translateX(100%);transform:translateX(100%)}}@keyframes _1IOU{0%{-webkit-transform:translateX(-100%);transform:translateX(-100%)}to{-webkit-transform:translateX(100%);transform:translateX(100%)}}@media (max-width:992px){.searchinputmobile{width:100%!important}}.clearable__clear{position:relative;padding:0 10px;font-style:normal;font-size:1.2em;user-select:none;cursor:pointer;z-index:3;background:#fff;height:38px;margin-top:1px;line-height:37px;border-radius:0 .5rem .5rem 0}</style><style type="text/css">.height450{height:450px}.badge-info{background-color:rgba(23,160,184,.17);color:#17a2b8}.section-title .badge{margin:0 0 8px}.badge{border-radius:100px;font-size:12px;font-stretch:normal;font-style:normal;font-weight:500;letter-spacing:1px;line-height:normal;padding:4px 14px;text-transform:uppercase}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{color:#3f345f}h2{font-size:36px}.social-overlap{position:absolute;width:100%;transform:translateY(-50%)}.justify-content-center{-webkit-box-pack:center!important;-ms-flex-pack:center!important;justify-content:center!important}.social-bar{display:flex;border-radius:10px;background:#fff;box-shadow:0 0 60px rgba(93,70,232,.15);border:1px solid#ebe9e9}.iconpad{padding:12px 0;width:100%}.mb-3,.my-3{margin-bottom:1rem!important}.social-icons a{border-radius:50px;color:#3f345f;display:inline-block;line-height:52px;height:50px;width:50px;box-shadow:0 5px 25px rgba(93,70,232,.15);margin:15px;font-size:22px}a{text-decoration:none!important;color:#3f345f;transition:all .3s ease 0s}.slider-nav{display:flex}.process-scetion .slider-nav-item{position:relative;flex-grow:0;flex-shrink:0;border-radius:50%;text-align:center;background:#fff;cursor:pointer;transition:all .4s ease}.slider-nav-item:before{position:absolute;content:"";height:calc(100% + 16px);width:calc(100% + 16px);top:-8px;left:-8px;border-radius:50%;border:1px solid rgba(132,132,164,.35);animation:1.5s linear 0s normal none infinite focuse}.process-scetion .slider-nav-item:nth-child(2){color:#40beff}.process-scetion .slider-nav-item:nth-child(3){color:#311f9b}.process-scetion .slider-nav-item:nth-child(4){color:#ff9259}.process-scetion .slider-nav-item:nth-child(5){color:#38385f}.process-scetion .slider-nav-item:last-child:after{display:none}.process-scetion .slider-nav-item .ikon{font-size:50px;line-height:80px}.process-scetion .slider-nav-item.active:before{position:absolute;content:"";height:calc(100% + 16px);width:calc(100% + 16px);top:-8px;left:-8px;border-radius:50%;border:1px solid rgba(132,132,164,.35);animation:1.5s linear 0s normal none infinite focuse}@keyframes focuse{0%{transform:scale(.8);opacity:1}75%{transform:scale(1.2);opacity:0}to{transform:scale(1.2);opacity:0}}@keyframes slide{0%{background-position:0 0}to{background-position:40px 0}}@-webkit-keyframes jello-horizontal{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}@keyframes jello-horizontal{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}.jello-horizontal,.social-bar a:hover i{-webkit-animation:jello-horizontal .9s both;animation:jello-horizontal .9s both}@media only screen and (max-width:300px){.process-scetion .slider-nav-item{height:50px;width:50px;margin:15px 10px;line-height:28px}}.rating__label--half{padding-right:0;margin-right:-.6em;z-index:2}.rating__icon--none{color:#eee}.rating__input--none:checked+.rating__label .rating__icon--none{color:red}.rating-group:hover .rating__label--half .rating__icon--star,.rating-group:hover .rating__label .rating__icon--star{color:orange}.rating__input:hover~.rating__label--half .rating__icon--star,.rating__input:hover~.rating__label .rating__icon--star{color:#ddd}.rating-group:hover .rating__input--none:not(:hover)+.rating__label .rating__icon--none{color:#eee}.rating__input--none:hover+.rating__label .rating__icon--none{color:red}.rating__icon{pointer-events:none}.rating__input{position:absolute!important;left:-9999px!important}.rating__input--none{display:none}.rating__label{cursor:pointer;padding:0 .1em;font-size:2rem}.rating__icon--star{color:orange}.rating__input:checked~.rating__label .rating__icon--star{color:#ddd}.rating-group:hover .rating__label .rating__icon--star{color:orange}.rating__input:hover~.rating__label .rating__icon--star{color:#ddd}</style><style type="text/css">@media (max-width:1200px){.colizq{flex:0 0 58.33333%;max-width:58.33333%}.colderecha{flex:0 0 41.66667%;max-width:41.66667%}}.quetesiga{position:fixed!important;top:85px;width:auto!important;overflow-y:scroll;height:-webkit-fill-available;margin-bottom:112px}@media (max-height:787px){.quetesiga::-webkit-scrollbar{width:5px}.quetesiga::-webkit-scrollbar-thumb{background:#ccc;border:0 none #fff;border-radius:50px}.quetesiga::-webkit-scrollbar-track{background:#e7e7e7;border:0 none #fff;border-radius:7px}}.quetesiga2{position:fixed!important;top:85px;width:auto!important;overflow-y:scroll;height:-webkit-fill-available;margin-bottom:175px}@media (max-height:582px){.quetesiga2::-webkit-scrollbar{width:5px}.quetesiga2::-webkit-scrollbar-thumb{background:#ccc;border:0 none #fff;border-radius:50px}.quetesiga2::-webkit-scrollbar-track{background:#e7e7e7;border:0 none #fff;border-radius:7px}}.modal-backdrop{height:auto;display:none}#steps{width:100%}@media (max-width:767px){#steps{padding-top:90px!important}}#step{width:40px;height:40px;background-color:#fff;display:inline-block;border:4px solid;border-color:transparent;border-radius:50%;color:#cdd0da;font-weight:600;text-align:center;line-height:35px}#step:nth-child(n+2){margin:0 0 0 100px}#step:nth-child(n+2):before{width:75px;height:3px;position:absolute;margin-left:-9px;margin-top:-4px;background-color:#f3f3f3;transform:translate(-95px,21px);content:""}#step:after{width:150px;display:block;transform:translate(-55px,3px);color:#818698;content:attr(data-desc);font-weight:500;font-size:13px}#step.active{border-color:#15a97c;color:#15a97c}#step.active:before{background:linear-gradient(90deg,#15a97c 0,#15a97c)}#step.active:after{color:#15a97c}#step.done{border-color:#58bb58;color:#fff}#step.done,#step.done:before{background-color:#58bb58}@media (max-width:767px){.onboard-form{width:100%!important}#step:nth-child(n+2){margin:0 0 0 10px!important}#step:after,#step:nth-child(n+2):before{display:none!important}#step-chicos{height:60px}}@media (max-width:991px){.col-desktop{width:100%!important;flex:100%!important;max-width:100%!important}.col-mobile{display:none}.previewmobile{background:#fff;flex:100%;max-width:100%;position:fixed;top:0;bottom:0;right:0;left:0;z-index:9999999}.solomobile{display:initial!important}}@media (min-width:992px){.class-992chau{display:none}}.smartphone{position:relative;width:372px;height:640px;margin:auto;border:16px solid #000;border-top-width:60px;border-bottom-width:60px;border-radius:36px}.smartphone:before{width:60px;height:5px;top:-30px;border-radius:10px}.smartphone:after,.smartphone:before{content:"";display:block;position:absolute;left:50%;transform:translate(-50%,-50%);background:#333}.smartphone:after{width:35px;height:35px;bottom:-65px;border-radius:50%}.smartphone .content{width:340px;height:520px;background:#fff}.hoverbtn-generator:hover{color:#fff!important;background:#13aa7c!important}.selectedtypes{border-bottom:2px solid #2b3851;color:#13aa7c!important}.selectedtype{color:#fff!important;background:#13aa7c!important}.colorpicker-bs-popover{background:#fff!important}.hoversquares:hover{cursor:pointer}.activesquares,.hoversquares:hover{background:#b8bfd2!important}.vue-color__chrome__alpha-wrap,.vue-color__chrome__color-wrap,.vue-color__chrome__fields-wrap,.vue-color__chrome__toggle-btn{display:none!important}.vue-color__chrome__controls{align-items:center}.vue-color__chrome__active-color{margin-top:0}.fg-color{height:35px;flex:1}.fg-color-sample{display:inline-block;width:37px;border:none}.picker{display:flex;justify-content:justify}a.deshabilitar{pointer-events:none;cursor:default;background:#d4d4d4!important;border-color:#d4d4d4}@media (max-width:767px){.erroresalmedio{display:block;text-align:center;margin-bottom:15px}}#color-textarea{position:fixed;background:0 0;border:none;height:0;padding:10px;opacity:0;overflow:hidden;top:0;right:0}#color-picker{box-shadow:0 .5em 5em 0 rgba(0,0,0,.1);width:100%;margin:0 auto}.base-colors-container{display:flex;align-items:center;background-color:hsla(0,0%,90%,.3);border-radius:.35em .35em 0 0;width:100%;padding:2px}.base-colors{flex:1;background:linear-gradient(rgba(white,.1),rgba(black,.1));color:transparent;font-family:Montserrat,sans-serif;font-size:.8em;text-align:center;padding:.5em 1em;cursor:pointer;transition:.5s}.base-colors:first-of-type{border-radius:.25em 0 0 .25em}.base-colors:last-of-type{border-radius:0 .25em .25em 0}.base-red{background-color:#ff3c00}.base-yellow{background-color:#fad505}.base-orange{background-color:orange}.base-green{background-color:#49c804}.base-blue{background-color:#007bff}.base-white{background-color:#fff}.base-gray{background-color:#8c8c8c}.base-black{background-color:#000}.base-colors:hover{color:#fff}.base-color-white:hover,.base-colors:hover{box-shadow:0 0 2px 0 rgba(0,0,0,.1);letter-spacing:normal;opacity:1}.base-color-white:hover{color:#000}.base-color-white{flex:1;background:linear-gradient(rgba(white,.1),rgba(black,.1));color:transparent;font-family:Montserrat,sans-serif;font-size:.8em;text-align:center;padding:.5em 1em;cursor:pointer;transition:.5s}.base-color-white:first-of-type{border-radius:.25em 0 0 .25em}.base-color-white:last-of-type{border-radius:0 .25em .25em 0}.active{flex-basis:75%;box-shadow:0 0 2px 0 rgba(0,0,0,.1);color:#fff;letter-spacing:normal;opacity:1}.shade-colors-container{background-color:hsla(0,0%,90%,.3);border-radius:0 0 .35em .35em;width:100%;max-height:0;margin-top:.1em;overflow:hidden;transition:max-height 1s}.current-color{text-transform:capitalize;margin:3px 0 7px}.shade-colors{display:flex;border:1px solid rgba(0,0,0,.1);border-radius:5px;font-family:Roboto Mono,monospace;font-weight:300;width:100%;margin-bottom:5px;padding:10px 15px;cursor:pointer;transition:.1s}.shade-colors:nth-child(n+7){color:#ddd}.shade-colors:last-of-type{margin-bottom:0}.shade-colors:hover{transform:scale(1.01)}.shade-color-weight{flex:1}.copy-message{flex:3;text-align:center;font-size:.9em;letter-spacing:-.35em;opacity:0;transition:.3s}.shade-color-hex{flex:1;text-align:right;text-transform:uppercase}@media (max-width:768px){#color-picker{width:100%}.base-colors-container{display:block}}@media (max-width:500px){#color-picker{width:100%}.shade-colors{font-size:.8em}}.selectedcolor{border:3px solid #15a97c}input[type=date]{position:relative;padding:8px 3.5rem 9px .75rem;font-size:1rem;font-family:monospace;border:.0625rem solid #eaedf2;border-radius:.5rem;background:#fff url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='22' viewBox='0 0 20 22'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23688EBB' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' transform='translate(1 1)'%3E%3Crect width='18' height='18' y='2' rx='2'/%3E%3Cpath d='M13 0v4M5 0v4M0 8h18'/%3E%3C/g%3E%3C/svg%3E") right 1rem center no-repeat;cursor:pointer}input[type=date]:focus{outline:0;border-color:#3acfff;box-shadow:0 0 0 .25rem rgba(0,120,250,.1)}::-webkit-datetime-edit-day-field:hover,::-webkit-datetime-edit-month-field:hover,::-webkit-datetime-edit-year-field:hover{background:rgba(0,120,250,.1)}::-webkit-datetime-edit-text{opacity:0}::-webkit-clear-button,::-webkit-inner-spin-button{display:none}::-webkit-calendar-picker-indicator{position:absolute;width:2.5rem;height:100%;top:0;right:0;bottom:0;opacity:0;cursor:pointer;color:#0078fa;background:#0078fa}input[type=date]:hover::-webkit-calendar-picker-indicator{opacity:.05;position:absolute;top:0;left:0;right:0;bottom:0;width:auto;height:auto;color:transparent;background:0 0}input[type=date]:hover::-webkit-calendar-picker-indicator:hover{opacity:.15}[data-title]{position:relative}[data-title]:hover:before{content:attr(data-title);position:absolute;left:25px;display:inline-block;padding:3px 6px;border-radius:2px;background:#000;color:#fff;font-size:12px;font-family:sans-serif;white-space:nowrap}@media (max-width:768px){.mobile-hours{width:25%}.mobile-add{display:initial!important;width:25%}.desktop-add{display:none!important}.mobile-days{margin-bottom:4px!important}}.st0{fill:#e5e5e5}@media (max-width:767px){.solodesktop{display:none!important}}.hoversocialicon:hover{opacity:.7}.hovereandosocials:hover .mostrar-onhover{display:block!important}.Facebook-color{color:#3b5998}.Twitter-color{color:#55acee}.Linkedin-color{color:#0077b5}.Youtube-color{color:red}.Instagram-color{color:#e1306c}.Pinterest-color{color:#ca2127}.Snapchat-color{color:#fefc00}.Tiktok-color{color:#000}.Skype-color{color:#06aff0}.Dribbble-color{color:#ea4d89}.Vimeo-color{color:#46bbff}.Tumblr-color{color:#2c4662}.Reddit-color,.Soundcloud-color{color:#ff5601}.Telegram-color{color:#46bbff}.Website-color{color:#e3e3e3}</style><style type="text/css">.router-link-exact-active,.router-link-exact-active:hover{background:#f3f5f9;color:#2a354f!important}#quesedeslice::-webkit-scrollbar{width:5px}#quesedeslice::-webkit-scrollbar-thumb{background:#ccc;border:0 none #fff;border-radius:50px}#quesedeslice::-webkit-scrollbar-track{background:#e7e7e7;border:0 none #fff;border-radius:7px}@media (max-width:767px){.dropdown_folders{left:unset!important}}[v-cloak]{display:none}</style><style type="text/css">a{color:#515151}@media (max-width:767px){.downloads_mobile{width:100%!important;text-align:initial!important;margin-bottom:0}.cxEQKQ{background:none!important}.abajoenmobile{height:35px;position:relative;float:left}}.active{flex-basis:auto!important}</style><style type="text/css">#steps{width:100%}@media (max-width:767px){#steps{padding-top:135px!important}}#step{width:40px;height:40px;background-color:#fff;display:inline-block;border:4px solid;border-color:transparent;border-radius:50%;color:#cdd0da;font-weight:600;text-align:center;line-height:35px}#step:nth-child(n+2){margin:0 0 0 100px}#step:nth-child(n+2):before{width:75px;height:3px;position:absolute;margin-left:-9px;margin-top:-4px;background-color:#f3f3f3;transform:translate(-95px,21px);content:""}#step:after{width:150px;display:block;transform:translate(-55px,3px);color:#818698;content:attr(data-desc);font-weight:500;font-size:13px}#step.active{border-color:#15a97c;color:#15a97c}#step.active:before{background:linear-gradient(90deg,#15a97c 0,#15a97c)}#step.active:after{color:#15a97c}#step.done{border-color:#58bb58;color:#fff}#step.done,#step.done:before{background-color:#58bb58}@media (max-width:767px){.onboard-form{width:100%!important}#step:nth-child(n+2){margin:0 0 0 10px!important}#step:after,#step:nth-child(n+2):before{display:none!important}#step-chicos{height:60px}}@media (max-width:991px){.col-desktop{width:100%!important;flex:100%!important;max-width:100%!important}.col-mobile{display:none}.previewmobile{background:#fff;flex:100%;max-width:100%;position:fixed;top:0;bottom:0;right:0;left:0;z-index:1001}.solomobile{display:initial!important}}@media (min-width:992px){.class-992chau{display:none}}.hoverbtn-generator:hover{color:#fff!important;background:#13aa7c!important}.selectedtypes{border-bottom:2px solid #2b3851;color:#13aa7c!important}.selectedtype{color:#fff!important;background:#13aa7c!important}.colorpicker-bs-popover{background:#fff!important}.hoversquares:hover{cursor:pointer}.activesquares,.hoversquares:hover{background:#b8bfd2!important}.vue-color__chrome__alpha-wrap,.vue-color__chrome__color-wrap,.vue-color__chrome__fields-wrap,.vue-color__chrome__toggle-btn{display:none!important}.vue-color__chrome__controls{align-items:center}.vue-color__chrome__active-color{margin-top:0}.fg-color{height:35px;flex:1}.fg-color-sample{display:inline-block;width:37px;border:none}.picker{display:flex;justify-content:justify}a.deshabilitar{pointer-events:none;cursor:default;background:#d4d4d4!important;border-color:#d4d4d4}@media (max-width:767px){.erroresalmedio{display:block;text-align:center;margin-bottom:15px}}#color-textarea{position:fixed;background:transparent;border:none;height:0;padding:10px;opacity:0;overflow:hidden;top:0;right:0}#color-picker{box-shadow:0 .5em 5em 0 rgba(0,0,0,.1);width:100%;margin:0 auto}.base-colors-container{display:flex;align-items:center;background-color:hsla(0,0%,90%,.3);border-radius:.35em .35em 0 0;width:100%;padding:2px}.base-colors{flex:1;background:linear-gradient(rgba(white,.1),rgba(black,.1));color:transparent;font-family:Montserrat,sans-serif;font-size:.8em;text-align:center;padding:.5em 1em;cursor:pointer;transition:.5s}.base-colors:first-of-type{border-radius:.25em 0 0 .25em}.base-colors:last-of-type{border-radius:0 .25em .25em 0}.base-red{background-color:#ff3c00}.base-yellow{background-color:#fad505}.base-orange{background-color:orange}.base-green{background-color:#49c804}.base-blue{background-color:#007bff}.base-white{background-color:#fff}.base-gray{background-color:#8c8c8c}.base-black{background-color:#000}.base-colors:hover{color:#fff}.base-color-white:hover,.base-colors:hover{box-shadow:0 0 2px 0 rgba(0,0,0,.1);letter-spacing:normal;opacity:1}.base-color-white:hover{color:#000}.base-color-white{flex:1;background:linear-gradient(rgba(white,.1),rgba(black,.1));color:transparent;font-family:Montserrat,sans-serif;font-size:.8em;text-align:center;padding:.5em 1em;cursor:pointer;transition:.5s}.base-color-white:first-of-type{border-radius:.25em 0 0 .25em}.base-color-white:last-of-type{border-radius:0 .25em .25em 0}.active{flex-basis:75%;box-shadow:0 0 2px 0 rgba(0,0,0,.1);color:#fff;letter-spacing:normal;opacity:1}.shade-colors-container{background-color:hsla(0,0%,90%,.3);border-radius:0 0 .35em .35em;width:100%;max-height:0;margin-top:.1em;overflow:hidden;transition:max-height 1s}.current-color{text-transform:capitalize;margin:3px 0 7px}.shade-colors{display:flex;border:1px solid rgba(0,0,0,.1);border-radius:5px;font-family:Roboto Mono,monospace;font-weight:300;width:100%;margin-bottom:5px;padding:10px 15px;cursor:pointer;transition:.1s}.shade-colors:nth-child(n+7){color:#ddd}.shade-colors:last-of-type{margin-bottom:0}.shade-colors:hover{transform:scale(1.01)}.shade-color-weight{flex:1}.copy-message{flex:3;text-align:center;font-size:.9em;letter-spacing:-.35em;opacity:0;transition:.3s}.shade-color-hex{flex:1;text-align:right;text-transform:uppercase}@media (max-width:768px){#color-picker{width:100%}.base-colors-container{display:block}}@media (max-width:500px){#color-picker{width:100%}.shade-colors{font-size:.8em}}.selectedcolor{border:3px solid #15a97c}input[type=date]{position:relative;padding:8px 3.5rem 9px .75rem;font-size:1rem;font-family:monospace;border:.0625rem solid #eaedf2;border-radius:.5rem;background:#fff url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='22' viewBox='0 0 20 22'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23688EBB' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' transform='translate(1 1)'%3E%3Crect width='18' height='18' y='2' rx='2'/%3E%3Cpath d='M13 0v4M5 0v4M0 8h18'/%3E%3C/g%3E%3C/svg%3E") right 1rem center no-repeat;cursor:pointer}input[type=date]:focus{outline:none;border-color:#3acfff;box-shadow:0 0 0 .25rem rgba(0,120,250,.1)}::-webkit-datetime-edit-day-field:hover,::-webkit-datetime-edit-month-field:hover,::-webkit-datetime-edit-year-field:hover{background:rgba(0,120,250,.1)}::-webkit-datetime-edit-text{opacity:0}::-webkit-clear-button,::-webkit-inner-spin-button{display:none}::-webkit-calendar-picker-indicator{position:absolute;width:2.5rem;height:100%;top:0;right:0;bottom:0;opacity:0;cursor:pointer;color:#0078fa;background:#0078fa}input[type=date]:hover::-webkit-calendar-picker-indicator{opacity:.05;position:absolute;top:0;left:0;right:0;bottom:0;width:auto;height:auto;color:transparent;background:transparent}input[type=date]:hover::-webkit-calendar-picker-indicator:hover{opacity:.15}[data-title]{position:relative}[data-title]:hover:before{content:attr(data-title);position:absolute;left:25px;display:inline-block;padding:3px 6px;border-radius:2px;background:#000;color:#fff;font-size:12px;font-family:sans-serif;white-space:nowrap}@media (max-width:768px){.mobile-hours{width:25%}.mobile-add{display:initial!important;width:25%}.desktop-add{display:none!important}.mobile-days{margin-bottom:4px!important}}.quetesiga{position:fixed!important;top:85px;width:auto!important;overflow-y:scroll;height:-webkit-fill-available;margin-bottom:175px}@media (max-height:582px){.quetesiga::-webkit-scrollbar{width:5px}.quetesiga::-webkit-scrollbar-thumb{background:#ccc;border:0 none #fff;border-radius:50px}.quetesiga::-webkit-scrollbar-track{background:#e7e7e7;border:0 none #fff;border-radius:7px}}</style></head><body style="background: #f2f5f9!important;"><div style="display:none"><img src="./qrcode2_files/qriostats.png"></div>
+
+      <!-- LOTTIE -->
+      <script src="./qrcode2_files/lottie-player.js.download"></script>
+
+      <!-- INTERCOM -->
+      <!-- <script>
+        window.intercomSettings = {
+          app_id: "qmdyl5m3"
+        };
+      </script>
+
+      <script>
+      // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/qmdyl5m3'
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/qmdyl5m3';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+      </script> -->
+
+<!-- TOKEN -->
+<script> var lukastoken = "63330b6d483c1"; </script>
+
+    
+  
+    
+    <!-- <div style="position: fixed;bottom: 0;z-index: 1;padding: 10px;background: #fff;border: 1px solid #ddd;"><a href="https://www.producthunt.com/posts/qr-io?utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-qr-io" target="_blank" style=""><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=291640&amp;theme=light" alt="QR.io - Generate fully customized QR codes, with color, shape &amp; logo | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54"></a></div> -->
+    <div data-v-3f1ba458="" id="app"><div data-v-3f1ba458=""><nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-dark navbar-theme-primary headroom" style="padding-bottom: 0.8rem !important; padding-top: 0.8rem !important;"><div style="width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding-left: 1rem; padding-right: 1rem;"><a href="https://qr.io/dashboard/" class="navbar-brand @@logo_classes router-link-active" style="border-bottom: 0px; background: transparent;"><div class="d-flex align-items-center"><img src="./qrcode2_files/logo-title-white.png" alt="Logo QR.io" style="max-width: 135px;"></div></a> <div class="fiumfiummcqueen mcqueen_desktop" style=""><a href="https://qr.io/choose-plan/kBQYiaI7Nv?utm_campaign=dashboard_on_trial" class="btn btn-md btn-pricing-plan animate-up-2" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border-color: rgb(255, 255, 255);"><svg width="24" height="24" fill="#f4bd00" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" class="sc-eNQAEJ bqIowC"><path d="M5 12.5H15V14H5V12.5Z M5 11L4 7L8 8L10 4L12 8L16 7L15 11H5Z"></path></svg>
+                Upgrade Now</a> <a href="https://qr.io/choose-plan/kBQYiaI7Nv?utm_campaign=dashboard_trial_expired" class="btn btn-md btn-pricing-plan animate-up-2" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border-color: rgb(255, 255, 255); display: none;"><svg width="24" height="24" fill="#f4bd00" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" class="sc-eNQAEJ bqIowC"><path d="M5 12.5H15V14H5V12.5Z M5 11L4 7L8 8L10 4L12 8L16 7L15 11H5Z"></path></svg>
+                Upgrade Now</a> <a class="btn btn-md btn-pricing-plan" style="color: rgb(244, 189, 0); background-color: rgb(255, 255, 255); border-color: rgb(244, 189, 0); cursor: initial; height: 42px; border-radius: 4px; display: none;"><svg width="24" height="24" fill="#f4bd00" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" class="sc-eNQAEJ bqIowC" style="margin-left: -2px;"><path d="M5 12.5H15V14H5V12.5Z M5 11L4 7L8 8L10 4L12 8L16 7L15 11H5Z"></path></svg>
+                  Premium</a> <div class="dropdown mb-lg-0" style="display: inline-block; padding: 0px 0px 0px 20px;"><a id="langsDropdown" href="https://qr.io/dashboard/edit-colorandshape/bNTVoc#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle footer-language-link pb-2" style="color: rgb(255, 255, 255);">
+                      19233333070@uezo.edu.br <i class="fas fa-chevron-down ml-1"></i></a> <div aria-labelledby="langsDropdown" class="dropdown-menu dropdown-menu-center mt-0" style="left: 20px !important; right: 0px;"><a href="https://qr.io/" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-home mr-2"></i> Home</a> <a href="https://qr.io/dashboard/" class="dropdown-item text-sm router-link-active" style="border-bottom: none;"><i class="fas fa-qrcode mr-2"></i> Dashboard</a> <a href="https://qr.io/dashboard/account" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-cog mr-2"></i> Account Settings</a> <a href="https://qr.io/dashboard/billing" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-file-alt mr-2"></i> Billing</a> <a href="https://qr.io/api-documentation" target="_blank" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-bezier-curve mr-2"></i> API</a> <a href="https://qr.userface.com/" target="_blank" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-map mr-2"></i> Roadmap</a> <a href="https://qr.io/contact" target="_blank" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-question-circle mr-2"></i> Help</a> <a href="https://qr.io/logout" class="dropdown-item text-sm"><i class="fas fa-sign-out-alt mr-2"></i> Log Out</a></div></div></div> <div class="mcqueen_mobile" style="display: none;"><div class="dropdown mb-lg-0" style="display: inline-block; padding: 12px 0px 0px 20px; float: right;"><a id="langsDropdown" href="https://qr.io/dashboard/edit-colorandshape/bNTVoc#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle footer-language-link pb-2" style="color: rgb(255, 255, 255);">
+                  My Account <i class="fas fa-chevron-down ml-1"></i></a> <div aria-labelledby="langsDropdown" class="dropdown-menu dropdown-menu-center mt-0" style="left: -60px !important; right: 0px;"><a href="https://qr.io/" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-home mr-2"></i> Home</a> <a href="https://qr.io/dashboard/" class="dropdown-item text-sm router-link-active" style="border-bottom: none;"><i class="fas fa-qrcode mr-2"></i> Dashboard</a> <a href="https://qr.io/dashboard/account" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-cog mr-2"></i> Account Settings</a> <a href="https://qr.io/dashboard/billing" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-file-alt mr-2"></i> Billing</a> <a href="https://qr.io/api-documentation" target="_blank" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-bezier-curve mr-2"></i> API</a> <a href="https://qr.userface.com/" target="_blank" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-map mr-2"></i> Roadmap</a> <a href="https://qr.io/contact" target="_blank" class="dropdown-item text-sm" style="border-bottom: none;"><i class="fas fa-question-circle mr-2"></i> Help</a> <a href="https://qr.io/logout" class="dropdown-item text-sm"><i class="fas fa-sign-out-alt mr-2"></i> Log Out</a></div></div></div></div></nav></div> <!----> <!----> <div data-v-3f1ba458=""><!----> <!----> <div><section class="section section-lg" style="padding-top: 100px; padding-bottom: 30px;"><div class="container"><div class="row align-items-start justify-content-around"><div class="col-8 col-desktop"><div class="card bg-white border-light p-3 mb-4 shadow"><div><div class="card-body p-4"><div class="accordion"><div class="card card-sm card-body shadow-sm" style="border: 0.1rem solid rgb(227, 236, 242) !important;"><a href="https://qr.io/dashboard/edit-colorandshape/bNTVoc#panel-4" data-target="#panel-4" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="panel-1" class="accordion-panel-header"><span class="icon-title h6 mb-0 font-weight-bold"><i class="fas fa-palette"></i>Color</span> <span class="icon"><i class="fas fa-plus"></i></span></a> <div id="panel-4" class="collapse show"><div class="pt-3"><div id="collapseOptions" class="collapse show"><div class="col-sm-12 mb-2 custom-background"><div class="row"><div class="col-12"><h6 style="margin-bottom: 10px;">Background color</h6> <div id="collapse-background" class="collapse show"><input class="form-control fg-color" style="box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 30px; border-radius: unset; width: 70%; display: inline-block;"> <input type="color" style="width: 19%; height: 35px; top: 5px; display: inline-block; position: relative; border: 0.1rem solid rgb(227, 236, 242); background: rgb(255, 255, 255);"></div></div></div> <div class="custom-control custom-switch mt-2"><input type="checkbox" id="trans-bg" name="transparent" class="custom-control-input"> <label for="trans-bg" class="custom-control-label" style="font-weight: 700;">Transparent background</label></div></div> <div class="col-sm-12"><div class="row"><div class="col-12"><h6 style="margin-bottom: 10px;">Dots color</h6> <input class="form-control fg-color" style="box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 30px; border-radius: unset; width: 70%; display: inline-block;"> <input type="color" style="width: 19%; height: 35px; top: 5px; display: inline-block; position: relative; border: 0.1rem solid rgb(227, 236, 242); background: rgb(255, 255, 255);"> <div class="form-group"><div class="custom-control custom-switch mt-2"><input type="checkbox" id="gradient-bg" name="gradient" class="custom-control-input"> <label for="gradient-bg" class="custom-control-label" style="font-weight: 700;">Gradient</label></div></div></div> <!----></div></div> <div class="col-12 mb-2"><div id="collapse-markers-bg" class="row"><div class="col-12"><h6 style="margin-bottom: 10px;">Marker border color</h6> <input class="form-control fg-color" style="box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 30px; border-radius: unset; width: 70%; display: inline-block;"> <input type="color" style="width: 19%; height: 35px; top: 5px; display: inline-block; position: relative; border: 0.1rem solid rgb(227, 236, 242); background: rgb(255, 255, 255);"></div> <div class="col-12 mt-2"><h6 style="margin-bottom: 10px;">Marker center color</h6> <input class="form-control fg-color" style="box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 30px; border-radius: unset; width: 70%; display: inline-block;"> <input type="color" style="width: 19%; height: 35px; top: 5px; display: inline-block; position: relative; border: 0.1rem solid rgb(227, 236, 242); background: rgb(255, 255, 255);"></div></div></div></div></div></div></div> <div class="card card-sm card-body shadow-sm" style="border: 0.1rem solid rgb(227, 236, 242) !important;"><div data-target="#panel-5" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="panel-5" class="accordion-panel-header"><span class="icon-title h6 mb-0 font-weight-bold"><i class="fas fa-qrcode"></i>Shape &amp; Form</span> <span class="icon"><i class="fas fa-plus"></i></span></div> <div id="panel-5" class="collapse show" style=""><div class="col-sm-12"><h3>Shape &amp; Form</h3> <h6 style="margin-bottom: 10px;">Dots</h6></div> <div class="col-sm-12 mb-2"><div class="btn-group-toggle styleselecta d-inline-block"><label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="default"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><path d="M5,1h1l0-1L4,0v1H3V0L0,0v0v0v2h1V1h0h1h1v1v0v0l0,0H2v1H1H0h0v3h0v0h2v0H1l0-2h1l0,1h1v1h3v0H5v0V5h1V4H5v1H3 l0-2l1,0v1h1V3h1V2H5V1z M5,3H4V2h1V3z"></path></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="special-circle"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><path d="M2.5,3C2.8,3,3,2.8,3,2.5L3,2h1.5C4.8,2,5,1.8,5,1.5C5,1.2,4.8,1,4.5,1H4V0L2,0l0,2.5C2,2.8,2.2,3,2.5,3z M4,1 L4,1L4,1L4,1z"></path><path d="M5.5,3C5.2,3,5,3.2,5,3.5S5.2,4,5.5,4C5.8,4,6,3.8,6,3.5S5.8,3,5.5,3z"></path><path d="M0.5,1C0.8,1,1,0.8,1,0.5V0L0,0v0v0.5C0,0.8,0.2,1,0.5,1z"></path><path d="M4,4L4,4L3,4l0,0v0C2.4,4,2,4.4,2,5h0H1V2.5C1,2.2,0.8,2,0.5,2S0,2.2,0,2.5V5h0c0,0.6,0.4,1,1,1h2v0V5h1v0h0v1 l1,0V5h0C5,4.4,4.6,4,4,4z"></path></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="special-circle-orizz"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><path d="M0.5,0.9l1,0c0.2,0,0.4-0.2,0.4-0.4c0-0.2-0.2-0.4-0.4-0.4l-1,0c-0.2,0-0.4,0.2-0.4,0.4S0.3,0.9,0.5,0.9z"></path> <path d="M1.5,1.9l2,0c0.2,0,0.4-0.2,0.4-0.4c0-0.2-0.2-0.4-0.4-0.4l-2,0c-0.2,0-0.4,0.2-0.4,0.4S1.3,1.9,1.5,1.9z"></path> <path d="M3.5,0.9c0.2,0,0.4-0.2,0.4-0.4c0-0.2-0.2-0.4-0.4-0.4S3.1,0.3,3.1,0.5C3.1,0.7,3.3,0.9,3.5,0.9z"></path> <path d="M4.5,2.1l-3,0c-0.2,0-0.4,0.2-0.4,0.4s0.2,0.4,0.4,0.4l3,0c0.2,0,0.4-0.2,0.4-0.4S4.7,2.1,4.5,2.1z"></path> <path d="M1.9,3.5c0-0.2-0.2-0.4-0.4-0.4H0v0.8h1.5C1.7,3.9,1.9,3.7,1.9,3.5z"></path> <path d="M4.5,3.1c-0.2,0-0.4,0.2-0.4,0.4s0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4S4.7,3.1,4.5,3.1z"></path> <path d="M5.9,4.5c0-0.2-0.2-0.4-0.4-0.4l-1,0c-0.2,0-0.4,0.2-0.4,0.4s0.2,0.4,0.4,0.4l1,0C5.7,4.9,5.9,4.7,5.9,4.5z"></path> <path d="M3.5,4.1l-2,0c-0.2,0-0.4,0.2-0.4,0.4s0.2,0.4,0.4,0.4l2,0c0.2,0,0.4-0.2,0.4-0.4S3.7,4.1,3.5,4.1z"></path> <path d="M2.5,5.1l-2,0c-0.2,0-0.4,0.2-0.4,0.4c0,0.2,0.2,0.4,0.4,0.4l2,0c0.2,0,0.4-0.2,0.4-0.4S2.7,5.1,2.5,5.1z"></path> <path d="M6,0.1l-1.5,0c-0.2,0-0.4,0.2-0.4,0.4s0.2,0.4,0.4,0.4l1.5,0h0L6,0.1L6,0.1z"></path> <path d="M5.1,5.5c0,0.2,0.2,0.4,0.4,0.4H6V5.1H5.5C5.3,5.1,5.1,5.3,5.1,5.5z"></path></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="special-circle-vert"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><path d="M0.5,4.1c-0.2,0-0.4,0.2-0.4,0.4l0,1c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4l0-1C0.9,4.3,0.7,4.1,0.5,4.1z"></path> <path d="M1.5,2.1c-0.2,0-0.4,0.2-0.4,0.4l0,2c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4l0-2C1.9,2.3,1.7,2.1,1.5,2.1z"></path> <path d="M0.5,2.9c0.2,0,0.4-0.2,0.4-0.4S0.7,2.1,0.5,2.1c-0.2,0-0.4,0.2-0.4,0.4S0.3,2.9,0.5,2.9z"></path> <path d="M2.5,1.1c-0.2,0-0.4,0.2-0.4,0.4l0,3c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4l0-3C2.9,1.3,2.7,1.1,2.5,1.1z"></path> <path d="M3.5,4.1c-0.2,0-0.4,0.2-0.4,0.4V6h0.8V4.5C3.9,4.3,3.7,4.1,3.5,4.1z"></path> <path d="M3.5,1.1c-0.2,0-0.4,0.2-0.4,0.4s0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4S3.7,1.1,3.5,1.1z"></path> <path d="M4.5,1.9c0.2,0,0.4-0.2,0.4-0.4l0-1c0-0.2-0.2-0.4-0.4-0.4c-0.2,0-0.4,0.2-0.4,0.4l0,1 C4.1,1.7,4.3,1.9,4.5,1.9z"></path> <path d="M4.5,2.1c-0.2,0-0.4,0.2-0.4,0.4l0,2c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4l0-2C4.9,2.3,4.7,2.1,4.5,2.1z"></path> <path d="M5.5,3.1c-0.2,0-0.4,0.2-0.4,0.4l0,2c0,0.2,0.2,0.4,0.4,0.4c0.2,0,0.4-0.2,0.4-0.4l0-2 C5.9,3.3,5.7,3.1,5.5,3.1z"></path> <path d="M0.1,0l0,1.5c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4l0-1.5v0L0.1,0L0.1,0z"></path> <path d="M5.5,0.9c0.2,0,0.4-0.2,0.4-0.4V0H5.1v0.5C5.1,0.7,5.3,0.9,5.5,0.9z"></path></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="blob"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><circle cx="5.5" cy="4.5" r="0.5"></circle> <path d="M5.8,0.2C5.7,0.2,5.6,0.1,5.5,0.1c-0.2,0-0.4,0.2-0.4,0.4s0.2,0.4,0.4,0.4c0.1,0,0.2,0,0.3-0.1 C5.8,0.7,5.9,0.7,6,0.7V0.3C5.9,0.3,5.8,0.3,5.8,0.2z"></path> <path d="M3.9,4.5c0-0.2-0.2-0.4-0.4-0.4c-0.1,0-0.2,0-0.3,0.1C3.2,4.3,3.1,4.3,3,4.3c-0.1,0-0.2,0-0.2-0.1 C2.7,4.2,2.6,4.1,2.5,4.1c-0.2,0-0.4,0.2-0.4,0.4c0,0.1,0,0.2,0.1,0.3C2.3,4.8,2.3,4.9,2.3,5c0,0.2-0.1,0.3-0.3,0.3c0,0,0,0-0.1,0 C1.9,5.1,1.7,5,1.5,5S1.1,5.1,1.1,5.3c0,0,0,0-0.1,0v0c-0.1,0-0.2,0-0.2-0.1c0,0,0,0,0,0C0.7,5.2,0.7,5.1,0.7,5c0,0,0,0,0-0.1 C0.9,4.9,1,4.7,1,4.5S0.9,4.1,0.7,4.1c0,0,0,0,0-0.1h0c0-0.1,0-0.2,0.1-0.2c0.1-0.1,0.1-0.2,0.1-0.3c0-0.2-0.2-0.4-0.4-0.4 S0.1,3.3,0.1,3.5c0,0.1,0,0.2,0.1,0.3C0.3,3.8,0.3,3.9,0.3,4c0,0,0,0,0,0.1C0.1,4.1,0,4.3,0,4.5s0.1,0.4,0.3,0.4c0,0,0,0,0,0 c0,0,0,0,0,0c0,0.1,0,0.2-0.1,0.2C0.2,5.3,0.1,5.4,0.1,5.5c0,0.2,0.2,0.4,0.4,0.4c0.1,0,0.2,0,0.3-0.1C0.8,5.7,0.9,5.7,1,5.7v0 c0,0,0,0,0.1,0C1.1,5.9,1.3,6,1.5,6s0.4-0.1,0.4-0.3c0,0,0,0,0.1,0c0.2,0,0.3,0.1,0.3,0.3h0.3c0-0.2,0.1-0.3,0.3-0.3h0 c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0.1c0,0,0,0,0,0C3.3,5.8,3.3,5.9,3.3,6h0.3c0-0.1,0-0.2,0.1-0.2c0,0,0,0,0,0 c0.1-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2-0.1-0.3c0,0,0,0,0,0C3.7,5.2,3.7,5.1,3.7,5h0c0-0.1,0-0.2,0.1-0.2C3.8,4.7,3.9,4.6,3.9,4.5z M3.2,5.2C3.2,5.2,3.2,5.2,3.2,5.2c0,0-0.1,0.1-0.2,0.1c0,0,0,0-0.1,0h0C2.8,5.3,2.7,5.2,2.7,5c0-0.1,0-0.2,0.1-0.2c0,0,0,0,0,0 C2.8,4.7,2.9,4.7,3,4.7s0.2,0,0.2,0.1c0,0,0,0,0,0C3.3,4.8,3.3,4.9,3.3,5h0C3.3,5.1,3.3,5.2,3.2,5.2z"></path> <path d="M5.2,2.8c0.1,0.1,0.2,0.1,0.3,0.1c0.2,0,0.4-0.2,0.4-0.4S5.7,2.1,5.5,2.1c-0.1,0-0.2,0-0.3,0.1 C5.2,2.3,5.1,2.3,5,2.3c0,0,0,0,0,0v0c0,0,0,0-0.1,0C4.9,2.1,4.7,2,4.5,2C4.3,2,4.1,2.1,4.1,2.3c0,0,0,0-0.1,0 c-0.1,0-0.2,0-0.2-0.1c0,0,0,0,0,0C3.7,2.2,3.7,2.1,3.7,2c0-0.1,0-0.2,0.1-0.2c0,0,0,0,0,0c0.1-0.1,0.1-0.2,0.1-0.3 c0-0.1,0-0.2-0.1-0.3c0,0,0,0,0,0C3.7,1.2,3.7,1.1,3.7,1c0-0.1,0-0.2,0.1-0.2c0.1-0.1,0.1-0.2,0.1-0.3c0-0.2-0.2-0.4-0.4-0.4 c-0.2,0-0.4,0.2-0.4,0.4c0,0.1,0,0.2,0.1,0.3C3.3,0.8,3.3,0.9,3.3,1c0,0.1,0,0.2-0.1,0.2c0,0,0,0,0,0C3.2,1.3,3.1,1.4,3.1,1.5 c0,0.1,0,0.2,0.1,0.3c0,0,0,0,0,0C3.3,1.8,3.3,1.9,3.3,2c0,0.1,0,0.2-0.1,0.2C3.2,2.3,3.1,2.4,3.1,2.5c0,0.2,0.2,0.4,0.4,0.4 c0.1,0,0.2,0,0.3-0.1C3.8,2.7,3.9,2.7,4,2.7c0,0,0,0,0,0l0,0c0,0,0,0,0,0c0,0,0,0,0.1,0C4.1,2.9,4.3,3,4.5,3c0.2,0,0.4-0.1,0.4-0.3 c0,0,0,0,0.1,0c0,0,0,0,0,0C5.1,2.7,5.2,2.7,5.2,2.8z"></path> <path d="M0.5,0.9c0.1,0,0.2,0,0.3-0.1C0.8,0.7,0.9,0.7,1,0.7c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0.1c0,0,0,0,0,0 C1.3,0.8,1.3,0.9,1.3,1h0c0,0,0,0,0,0.1C1.1,1.1,1,1.3,1,1.5s0.1,0.4,0.3,0.4c0,0,0,0,0,0.1c0,0,0,0,0,0c0,0.1,0,0.2-0.1,0.2 C1.2,2.3,1.1,2.4,1.1,2.5c0,0.2,0.2,0.4,0.4,0.4c0.2,0,0.4-0.2,0.4-0.4c0-0.1,0-0.2-0.1-0.3C1.7,2.2,1.7,2.1,1.7,2c0,0,0,0,0,0 c0,0,0,0,0,0C1.9,1.9,2,1.7,2,1.5S1.9,1.1,1.7,1.1c0,0,0,0,0-0.1v0c0-0.1,0-0.2,0.1-0.2c0,0,0,0,0,0c0.1-0.1,0.1-0.2,0.1-0.3 c0-0.1,0-0.2-0.1-0.3c0,0,0,0,0,0C1.7,0.2,1.7,0.1,1.7,0H1.3c0,0.1,0,0.2-0.1,0.2c0,0,0,0,0,0c0,0-0.1,0.1-0.2,0.1c0,0,0,0-0.1,0 c-0.1,0-0.2,0-0.2-0.1C0.7,0.2,0.6,0.1,0.5,0.1c-0.2,0-0.4,0.2-0.4,0.4S0.3,0.9,0.5,0.9z"></path></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="special-diamond"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><rect x="4.1" y="3.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -1.1563 4.2076)" width="0.7" height="0.7"></rect><polygon points="1,1.5 1,1 1,1 2.5,1 3,0.5 2.5,0 0.5,0 0,0.5 0,1.5 0.5,2 "></polygon><path d="M3,2"></path><rect x="5.1" y="4.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -1.5707 5.2069)" width="0.7" height="0.7"></rect><polygon points="0.5,3 0,3.5 0,5.5 0.5,6 1,5.5 1,4 2,4 2,5.5 2.5,6 4.5,6 5,5.5 4.5,5 3,5 3,3.5 2.5,3"></polygon><polygon points="5.5,0 4.5,0 4,0.5 4,1 3.5,1 3,1.5 3,2.5 3.5,3 4,2.5 4,2 4.5,2 5,1.5 5,1 5.5,1 6,0.5"></polygon></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="ribbon"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="3" width="1" height="1"></rect> <rect x="5" y="4" width="1" height="1"></rect> <polygon points="5,1 6,1 6,1 6,1 5.5,0.5 6,0 4,0 4,0 4,0 4,1 4,1 4,1 3,1 2.5,0.5 3,0 3,0 3,0 0,0 0,2 0,2 0,2 0.5,1.5 1,2 1,2 1,2 1,1 1,1 3,1 3,3 0,3 0,6 0,6 0,6 0.5,5.5 1,6 1,6 1,4 2,4 2,6 6,6 6,6 5,6 4.5,5.5 5,5 5,5 5,5 3,5 3,3 3.5,2.5 4,3 4,3 4,3 4,2 5,2 5,2 5,2"></polygon></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="oriental"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><path d="M5.5,4C5.2,4,5,4.2,5,4.5S5.2,5,5.5,5C5.8,5,6,4.8,6,4.5S5.8,4,5.5,4z"></path><path d="M0,2c0.6,0,1-0.4,1-1l1,0v0l0.2-0.1c0.2-0.1,0.4-0.1,0.6,0L3,1c0,0,0,0,0,0v0l0,0c0-0.6-0.4-1-1-1v0H0l0,1h0l0.1,0.2 c0.1,0.2,0.1,0.4,0,0.6L0,2z"></path><path d="M4.5,3C4.2,3,4,3.2,4,3.5S4.2,4,4.5,4C4.8,4,5,3.8,5,3.5S4.8,3,4.5,3z"></path><path d="M3,2L3,2L3,2l0.1,0.2c0.1,0.2,0.1,0.4,0,0.6L3,3c0.6,0,1-0.4,1-1l0,0h0h0.5C4.8,2,5,1.8,5,1.5V1l0.2-0.1 c0.2-0.1,0.4-0.1,0.6,0L6,1c0-0.6-0.4-1-1-1l0,0h0H4.5C4.2,0,4,0.2,4,0.5V1h0H3.5C3.2,1,3,1.2,3,1.5V2z"></path><path d="M4,5L4,5L3,5v0h0l0-1.5C3,3.2,2.8,3,2.5,3l-1,0C1.2,3,1,3.2,1,3.5L1,4l0,0L0.8,4.1c-0.2,0.1-0.4,0.1-0.6,0L0,4 c0,0.6,0.4,1,1,1l0,0l1,0l0,0.5C2,5.8,2.2,6,2.5,6L4,6l0,0v0l0.2-0.1c0.2-0.1,0.4-0.1,0.6,0L5,6C5,5.4,4.6,5,4,5z"></path></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="ellipse"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><path d="M5.2,4C5,4,4.9,4.3,5.1,4.5C5.3,4.8,5.6,5,5.8,5C6,5,6.1,4.7,5.9,4.5C5.7,4.2,5.4,4,5.2,4z"></path> <path d="M5,0.9C5,0.9,5.1,1,5.1,1H6V0C5.8,0,5,0.6,5,0.9z"></path> <path d="M5.9,2H4l0,0h0V1l0,0h0c0-0.2-0.6-1-0.9-1C3.1,0,3,0.1,3,0.1v2.5C3,2.9,3.1,3,3.3,3L5,3v0l0,0c0.2,0,1-0.6,1-0.9 C6,2.1,5.9,2,5.9,2z"></path> <path d="M3.7,4H2.3C2.1,4,2,4.1,2,4.3V5h0l0,0H1v0V4h0l0,0c0-0.2-0.6-1-0.9-1C0.1,3,0,3.1,0,3.1v2.5C0,5.9,0.1,6,0.3,6L4,6V4.3 C4,4.1,3.9,4,3.7,4z"></path> <path d="M0.1,1H1v0v1h0l0,0c0,0.2,0.6,1,0.9,1C1.9,3,2,2.9,2,2.9L2,0H1v0C0.8,0,0,0.6,0,0.9C0,0.9,0.1,1,0.1,1z"></path></svg></label> <label class="btn btn-light p-1 hoversquares activesquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="circle"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><circle cx="0.5" cy="0.5" r="0.5"></circle> <circle cx="1.5" cy="0.5" r="0.5"></circle> <circle cx="3.5" cy="0.5" r="0.5"></circle> <circle cx="4.5" cy="0.5" r="0.5"></circle> <circle cx="0.5" cy="1.5" r="0.5"></circle> <circle cx="4.5" cy="1.5" r="0.5"></circle> <circle cx="5.5" cy="1.5" r="0.5"></circle> <circle cx="0.5" cy="2.5" r="0.5"></circle> <circle cx="1.5" cy="2.5" r="0.5"></circle> <circle cx="0.5" cy="3.5" r="0.5"></circle> <circle cx="1.5" cy="3.5" r="0.5"></circle> <circle cx="4.5" cy="3.5" r="0.5"></circle> <circle cx="5.5" cy="3.5" r="0.5"></circle> <circle cx="2.5" cy="4.5" r="0.5"></circle> <circle cx="1.5" cy="5.5" r="0.5"></circle> <circle cx="3.5" cy="5.5" r="0.5"></circle> <circle cx="5.5" cy="5.5" r="0.5"></circle></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="star"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><polygon points="0.5,0.8 0.2,1 0.2,0.6 0,0.4 0.3,0.3 0.5,0 0.7,0.3 1,0.4 0.7,0.6 0.8,1"></polygon><polygon points="2.5,0.8 2.2,1 2.2,0.6 2,0.4 2.3,0.3 2.5,0 2.7,0.3 3,0.4 2.7,0.6 2.8,1"></polygon><polygon points="4.5,0.8 4.2,1 4.3,0.6 4,0.4 4.3,0.3 4.5,0 4.7,0.3 5,0.4 4.8,0.6 4.8,1"></polygon><polygon points="5.5,0.8 5.2,1 5.3,0.6 5,0.4 5.3,0.3 5.5,0 5.7,0.3 6,0.4 5.8,0.6 5.8,1"></polygon><polygon points="3.5,1.8 3.2,2 3.2,1.6 3,1.4 3.3,1.3 3.5,1 3.7,1.3 4,1.4 3.7,1.6 3.8,2"></polygon><polygon points="4.5,1.8 4.2,2 4.2,1.6 4,1.4 4.3,1.3 4.5,1 4.7,1.3 5,1.4 4.7,1.6 4.8,2"></polygon><polygon points="2.5,2.8 2.2,3 2.2,2.6 2,2.4 2.3,2.3 2.5,2 2.7,2.3 3,2.4 2.7,2.6 2.8,3"></polygon><polygon points="3.5,2.8 3.2,3 3.2,2.6 3,2.4 3.3,2.3 3.5,2 3.7,2.3 4,2.4 3.7,2.6 3.8,3"></polygon><polygon points="0.5,3.8 0.2,4 0.2,3.6 0,3.4 0.3,3.3 0.5,3 0.7,3.3 1,3.4 0.7,3.6 0.8,4"></polygon><polygon points="1.5,3.8 1.2,4 1.2,3.6 1,3.4 1.3,3.3 1.5,3 1.7,3.3 2,3.4 1.7,3.6 1.8,4"></polygon><polygon points="2.5,5.8 2.2,6 2.2,5.6 2,5.4 2.3,5.3 2.5,5 2.7,5.3 3,5.4 2.8,5.6 2.8,6"></polygon><polygon points="3.5,5.8 3.2,6 3.2,5.6 3,5.4 3.3,5.3 3.5,5 3.7,5.3 4,5.4 3.8,5.6 3.8,6"></polygon><polygon points="0.5,1.8 0.2,2 0.2,1.6 0,1.4 0.3,1.3 0.5,1 0.7,1.3 1,1.4 0.7,1.6 0.8,2"></polygon><polygon points="4.5,3.8 4.2,4 4.3,3.6 4,3.4 4.3,3.3 4.5,3 4.7,3.3 5,3.4 4.8,3.6 4.8,4"></polygon><polygon points="5.5,4.8 5.2,5 5.3,4.6 5,4.4 5.3,4.3 5.5,4 5.7,4.3 6,4.4 5.8,4.6 5.8,5"></polygon><polygon points="0.5,5.8 0.2,6 0.2,5.6 0,5.4 0.3,5.3 0.5,5 0.7,5.3 1,5.4 0.7,5.6 0.8,6"></polygon></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="diamond"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><rect x="0.1" y="0.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -0.2075 0.4992)" width="0.7" height="0.7"></rect><rect x="0.1" y="1.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -0.9146 0.7923)" width="0.7" height="0.7"></rect><rect x="2.1" y="0.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 0.3783 1.9134)" width="0.7" height="0.7"></rect><rect x="4.1" y="0.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 0.9641 3.3276)" width="0.7" height="0.7"></rect><rect x="5.1" y="0.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.257 4.0347)" width="0.7" height="0.7"></rect><rect x="4.1" y="1.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 0.257 3.6205)" width="0.7" height="0.7"></rect><rect x="3.1" y="1.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.593460e-02 2.9134)" width="0.7" height="0.7"></rect><rect x="3.1" y="2.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -0.743 3.2063)" width="0.7" height="0.7"></rect><rect x="2.1" y="2.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -1.0359 2.4992)" width="0.7" height="0.7"></rect><rect x="1.1" y="3.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.0359 2.0849)" width="0.7" height="0.7"></rect><rect x="0.1" y="3.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.3287 1.3777)" width="0.7" height="0.7"></rect><rect x="0.1" y="5.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.7428 1.9634)" width="0.7" height="0.7"></rect><rect x="2.1" y="5.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.1573 3.3778)" width="0.7" height="0.7"></rect><rect x="3.1" y="5.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.8644 4.0849)" width="0.7" height="0.7"></rect><rect x="5.1" y="4.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -1.5715 5.2063)" width="0.7" height="0.7"></rect><rect x="4.1" y="3.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -1.1573 4.2063)" width="0.7" height="0.7"></rect></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="sparkle"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><path d="M0.4,0.9L0.4,0.9L0.4,0.9h0.1c0-0.2,0.2-0.3,0.4-0.4l0.1,0l0.1,0c0.2,0,0.3,0.2,0.4,0.4v0.1c0,0.2-0.2,0.3-0.4,0.4L1,1.5 v0.1l0.1,0c0.2,0,0.3,0.2,0.4,0.4v0.1c0,0.2-0.2,0.3-0.4,0.4L1,2.5v0.1l0.1,0c0.2,0,0.3,0.2,0.4,0.4l0,0.1h0.1l0-0.1 c0-0.2,0.2-0.3,0.4-0.4l0.1,0V2.5l-0.1,0c-0.2,0-0.3-0.2-0.4-0.4V1.9c0-0.2,0.2-0.3,0.4-0.4l0.1,0V1.5l-0.1,0 c-0.2,0-0.3-0.2-0.4-0.4V0.9c0-0.2,0.2-0.3,0.4-0.4l0.1,0V0.5l-0.1,0c-0.2,0-0.3-0.2-0.4-0.4l0-0.1H1.5l0,0.1 c0,0.2-0.2,0.3-0.4,0.4L1,0.5l-0.1,0c-0.2,0-0.3-0.2-0.4-0.4l0-0.1H0.5l0,0.1c0,0.2-0.2,0.3-0.4,0.4L0,0.5v0.1l0.1,0 C0.3,0.6,0.4,0.7,0.4,0.9z"></path> <path d="M3.6,4.1L3.6,4.1L3.6,4.1H3.4c0,0.2-0.2,0.3-0.4,0.4H2.9c-0.2,0-0.3-0.2-0.4-0.4l0-0.1H2.5l0,0.1c0,0.2-0.2,0.3-0.4,0.4 L2,4.5v0.1l0.1,0c0.2,0,0.3,0.2,0.4,0.4v0.1c0,0.2-0.2,0.3-0.4,0.4H1.9c-0.2,0-0.3-0.2-0.4-0.4l0-0.1H1.5l0,0.1 c0,0.2-0.2,0.3-0.4,0.4H0.9c-0.2,0-0.3-0.2-0.4-0.4V4.9c0-0.2,0.2-0.3,0.4-0.4l0.1,0V4.5l-0.1,0c-0.2,0-0.3-0.2-0.4-0.4V3.9 c0-0.2,0.2-0.3,0.4-0.4l0.1,0V3.5l-0.1,0c-0.2,0-0.3-0.2-0.4-0.4l0-0.1H0.5l0,0.1c0,0.2-0.2,0.3-0.4,0.4L0,3.5v0.1l0.1,0 c0.2,0,0.3,0.2,0.4,0.4v0.1c0,0.2-0.2,0.3-0.4,0.4L0,4.5v0.1l0.1,0c0.2,0,0.3,0.2,0.4,0.4v0.1c0,0.2-0.2,0.3-0.4,0.4L0,5.5v0.1 l0.1,0c0.2,0,0.3,0.2,0.4,0.4l0,0.1h0.1l0-0.1c0-0.2,0.2-0.3,0.4-0.4h0.1c0.2,0,0.3,0.2,0.4,0.4l0,0.1h0.1l0-0.1 c0-0.2,0.2-0.3,0.4-0.4h0.1c0.2,0,0.3,0.2,0.4,0.4l0,0.1h0.1l0-0.1c0-0.2,0.2-0.3,0.4-0.4h0.1c0.2,0,0.3,0.2,0.4,0.4l0,0.1h0.1 l0-0.1c0-0.2,0.2-0.3,0.4-0.4l0.1,0V5.5l-0.1,0c-0.2,0-0.3-0.2-0.4-0.4V4.9c0-0.2,0.2-0.3,0.4-0.4l0.1,0V4.5l-0.1,0 C3.7,4.4,3.6,4.3,3.6,4.1z M3.4,5.1c0,0.2-0.2,0.3-0.4,0.4H2.9c-0.2,0-0.3-0.2-0.4-0.4V4.9c0-0.2,0.2-0.3,0.4-0.4h0.1 c0.2,0,0.3,0.2,0.4,0.4V5.1z"></path> <path d="M5.6,4.1L5.6,4.1L5.6,4.1H5.4c0,0.2-0.2,0.3-0.4,0.4L5,4.5v0.1l0.1,0c0.2,0,0.3,0.2,0.4,0.4l0,0.1h0.1l0-0.1 c0-0.2,0.2-0.3,0.4-0.4l0.1,0V4.5l-0.1,0C5.7,4.4,5.6,4.3,5.6,4.1z"></path> <path d="M5.6,2.1L5.6,2.1L5.6,2.1H5.4c0,0.2-0.2,0.3-0.4,0.4H4.9c-0.2,0-0.3-0.2-0.4-0.4l0-0.1H4.5l0,0.1c0,0.2-0.2,0.3-0.4,0.4 H3.9c-0.2,0-0.3-0.2-0.4-0.4V1.9c0-0.2,0.2-0.3,0.4-0.4l0.1,0V1.5l-0.1,0c-0.2,0-0.3-0.2-0.4-0.4V0.9c0-0.2,0.2-0.3,0.4-0.4l0.1,0 V0.5l-0.1,0c-0.2,0-0.3-0.2-0.4-0.4l0-0.1H3.5l0,0.1c0,0.2-0.2,0.3-0.4,0.4L3,0.5v0.1l0.1,0c0.2,0,0.3,0.2,0.4,0.4v0.1 c0,0.2-0.2,0.3-0.4,0.4L3,1.5v0.1l0.1,0c0.2,0,0.3,0.2,0.4,0.4v0.1c0,0.2-0.2,0.3-0.4,0.4L3,2.5v0.1l0.1,0c0.2,0,0.3,0.2,0.4,0.4 l0,0.1h0.1l0-0.1c0-0.2,0.2-0.3,0.4-0.4h0.1c0.2,0,0.3,0.2,0.4,0.4l0,0.1h0.1l0-0.1c0-0.2,0.2-0.3,0.4-0.4h0.1 c0.2,0,0.3,0.2,0.4,0.4l0,0.1h0.1l0-0.1c0-0.2,0.2-0.3,0.4-0.4l0.1,0V2.5l-0.1,0C5.7,2.4,5.6,2.3,5.6,2.1z"></path> <path d="M5.9,0.4c-0.2,0-0.3-0.2-0.4-0.4l0-0.1H5.5l0,0.1c0,0.2-0.2,0.3-0.4,0.4L5,0.5v0.1l0.1,0c0.2,0,0.3,0.2,0.4,0.4l0,0.1h0.1 l0-0.1c0-0.2,0.2-0.3,0.4-0.4V0.4L5.9,0.4L5.9,0.4z"></path></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="danger"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><polygon points="2.9,0.5 3,0.4 3,0 2.6,0 2.5,0.1 2.4,0 2,0 2,0.4 2.1,0.5 2,0.6 2,1 2.4,1 2.5,0.9 2.6,1 3,1 3,0.6"></polygon> <path d="M6,0H5.6L5.5,0.1L5.4,0H5H4.6L4.5,0.1L4.4,0H4v0.4l0.1,0.1L4,0.6V1H3.6L3.5,1.1L3.4,1H3v0.4l0.1,0.1L3,1.6V2 h0.4l0.1-0.1L3.6,2H4h0.4l0.1-0.1L4.6,2H5V1.6L4.9,1.5L5,1.4V1h0.4l0.1-0.1L5.6,1H6V0.6L5.9,0.5L6,0.4V0z M4,1.6L3.9,1.5L4,1.4 l0.1,0.1L4,1.6z M4.5,1.1L4.4,1l0.1-0.1L4.6,1L4.5,1.1z M5,0.6L4.9,0.5L5,0.4l0.1,0.1L5,0.6z"></path> <polygon points="2.5,2.1 2.4,2 2,2 2,2.4 2.1,2.5 2,2.6 2,3 2.4,3 2.5,2.9 2.6,3 3,3 3,2.6 2.9,2.5 3,2.4 3,2 2.6,2"></polygon> <path d="M0.5,1.9L0.6,2H1V1.6L0.9,1.5L1,1.4V1V0.6L0.9,0.5L1,0.4V0H0.6L0.5,0.1L0.4,0H0v0.4l0.1,0.1L0,0.6V1v0.4 l0.1,0.1L0,1.6V2h0.4L0.5,1.9z M0.5,0.9L0.6,1L0.5,1.1L0.4,1L0.5,0.9z"></path> <path d="M1.5,3.1L1.4,3H1H0.6L0.5,3.1L0.4,3H0v0.4l0.1,0.1L0,3.6V4h0.4l0.1-0.1L0.6,4H1h0.4l0.1-0.1L1.6,4H2V3.6 L1.9,3.5L2,3.4V3H1.6L1.5,3.1z M1,3.6L0.9,3.5L1,3.4l0.1,0.1L1,3.6z"></path> <polygon points="0.5,5.1 0.4,5 0,5 0,5.4 0.1,5.5 0,5.6 0,6 0.4,6 0.5,5.9 0.6,6 1,6 1,5.6 0.9,5.5 1,5.4 1,5 0.6,5"></polygon> <path d="M3.5,5.1L3.4,5H3H2.6L2.5,5.1L2.4,5H2v0.4l0.1,0.1L2,5.6V6h0.4l0.1-0.1L2.6,6H3h0.4l0.1-0.1L3.6,6H4V5.6 L3.9,5.5L4,5.4V5H3.6L3.5,5.1z M3,5.6L2.9,5.5L3,5.4l0.1,0.1L3,5.6z"></path> <polygon points="4.9,3.5 5,3.4 5,3 4.6,3 4.5,3.1 4.4,3 4,3 4,3.4 4.1,3.5 4,3.6 4,4 4.4,4 4.5,3.9 4.6,4 5,4 5,3.6"></polygon> <polygon points="5.5,4.1 5.4,4 5,4 5,4.4 5.1,4.5 5,4.6 5,5 5.4,5 5.5,4.9 5.6,5 6,5 6,4.6 5.9,4.5 6,4.4 6,4 5.6,4"></polygon></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="cross"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><polygon points="0.3,2 0.7,2 0.7,1.7 1,1.7 1,1.3 0.7,1.3 0.7,1 0.7,0.7 1,0.7 1,0.3 0.7,0.3 0.7,0 0.3,0 0.3,0.3 0,0.3 0,0.7 0.3,0.7 0.3,1 0.3,1.3 0,1.3 0,1.7 0.3,1.7 "></polygon><polygon points="2.3,1 2.7,1 2.7,0.7 3,0.7 3,0.3 2.7,0.3 2.7,0 2.3,0 2.3,0.3 2,0.3 2,0.7 2.3,0.7 "></polygon><polygon points="5.7,0.3 5.7,0 5.3,0 5.3,0.3 5,0.3 4.7,0.3 4.7,0 4.3,0 4.3,0.3 4,0.3 4,0.7 4.3,0.7 4.3,1 4.3,1.3 4,1.3 3.7,1.3 3.7,1 3.3,1 3.3,1.3 3,1.3 3,1.7 3.3,1.7 3.3,2 3.7,2 3.7,1.7 4,1.7 4,1.7 4.3,1.7 4.3,2 4.7,2 4.7,1.7 5,1.7 5,1.3 4.7,1.3 4.7,1 4.7,0.7 5,0.7 5,0.7 5.3,0.7 5.3,1 5.7,1 5.7,0.7 6,0.7 6,0.3 "></polygon><polygon points="2.3,3 2.7,3 2.7,2.7 3,2.7 3,2.3 2.7,2.3 2.7,2 2.3,2 2.3,2.3 2,2.3 2,2.7 2.3,2.7 "></polygon><polygon points="1.7,3 1.3,3 1.3,3.3 1,3.3 0.7,3.3 0.7,3 0.3,3 0.3,3.3 0,3.3 0,3.7 0.3,3.7 0.3,4 0.7,4 0.7,3.7 1,3.7 1,3.7 1.3,3.7 1.3,4 1.7,4 1.7,3.7 2,3.7 2,3.3 1.7,3.3 "></polygon><polygon points="4.7,3 4.3,3 4.3,3.3 4,3.3 4,3.7 4.3,3.7 4.3,4 4.7,4 4.7,3.7 5,3.7 5,3.3 4.7,3.3 "></polygon><polygon points="5.7,4 5.3,4 5.3,4.3 5,4.3 5,4.7 5.3,4.7 5.3,5 5.7,5 5.7,4.7 6,4.7 6,4.3 5.7,4.3 "></polygon><polygon points="3.7,5 3.3,5 3.3,5.3 3,5.3 2.7,5.3 2.7,5 2.3,5 2.3,5.3 2,5.3 2,5.7 2.3,5.7 2.3,6 2.7,6 2.7,5.7 3,5.7 3,5.7 3.3,5.7 3.3,6 3.7,6 3.7,5.7 4,5.7 4,5.3 3.7,5.3 "></polygon><polygon points="0.7,5 0.3,5 0.3,5.3 0,5.3 0,5.7 0.3,5.7 0.3,6 0.7,6 0.7,5.7 1,5.7 1,5.3 0.7,5.3 "></polygon></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="plus"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><path d="M0.7,0.8L0.7,0.8L0.7,0.8c0.1-0.1,0.2-0.1,0.2-0.1C1,0.6,1,0.6,1,0.5c0-0.1-0.1-0.2-0.2-0.2H0.7V0.2 C0.7,0.1,0.6,0,0.5,0S0.3,0.1,0.3,0.2v0.1H0.2C0.1,0.3,0,0.4,0,0.5s0.1,0.2,0.2,0.2h0.1v0.1C0.3,0.9,0.4,1,0.5,1 c0.1,0,0.1,0,0.2-0.1S0.7,0.8,0.7,0.8z"></path><path d="M2.2,0.7L2.2,0.7L2.2,0.7C2.3,0.9,2.4,1,2.5,1c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V0.7h0.1 c0.1,0,0.1,0,0.2-0.1C3,0.6,3,0.6,3,0.5c0-0.1-0.1-0.2-0.2-0.2H2.7V0.2C2.7,0.1,2.6,0,2.5,0S2.3,0.1,2.3,0.2v0.1H2.2 C2.1,0.3,2,0.4,2,0.5S2.1,0.7,2.2,0.7z"></path><path d="M4.7,0.8L4.7,0.8L4.7,0.8c0.1-0.1,0.2-0.1,0.2-0.1C5,0.6,5,0.6,5,0.5c0-0.1-0.1-0.2-0.2-0.2H4.7V0.2 C4.7,0.1,4.6,0,4.5,0S4.3,0.1,4.3,0.2v0.1H4.2C4.1,0.3,4,0.4,4,0.5s0.1,0.2,0.2,0.2h0.1v0.1C4.3,0.9,4.4,1,4.5,1 c0.1,0,0.1,0,0.2-0.1S4.7,0.8,4.7,0.8z"></path><path d="M5.2,0.7L5.2,0.7L5.2,0.7C5.3,0.9,5.4,1,5.5,1c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V0.7h0.1 c0.1,0,0.1,0,0.2-0.1C6,0.6,6,0.6,6,0.5c0-0.1-0.1-0.2-0.2-0.2H5.7V0.2C5.7,0.1,5.6,0,5.5,0S5.3,0.1,5.3,0.2v0.1H5.2 C5.1,0.3,5,0.4,5,0.5S5.1,0.7,5.2,0.7z"></path><path d="M4.2,1.7L4.2,1.7L4.2,1.7C4.3,1.9,4.4,2,4.5,2c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V1.7h0.1 c0.1,0,0.1,0,0.2-0.1C5,1.6,5,1.6,5,1.5c0-0.1-0.1-0.2-0.2-0.2H4.7V1.2C4.7,1.1,4.6,1,4.5,1S4.3,1.1,4.3,1.2v0.1H4.2 C4.1,1.3,4,1.4,4,1.5S4.1,1.7,4.2,1.7z"></path><path d="M3.7,1.8L3.7,1.8L3.7,1.8c0.1-0.1,0.2-0.1,0.2-0.1C4,1.6,4,1.6,4,1.5c0-0.1-0.1-0.2-0.2-0.2H3.7V1.2 C3.7,1.1,3.6,1,3.5,1S3.3,1.1,3.3,1.2v0.1H3.2C3.1,1.3,3,1.4,3,1.5s0.1,0.2,0.2,0.2h0.1v0.1C3.3,1.9,3.4,2,3.5,2 c0.1,0,0.1,0,0.2-0.1S3.7,1.8,3.7,1.8z"></path><path d="M3.2,2.7L3.2,2.7L3.2,2.7C3.3,2.9,3.4,3,3.5,3c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V2.7h0.1 c0.1,0,0.1,0,0.2-0.1C4,2.6,4,2.6,4,2.5c0-0.1-0.1-0.2-0.2-0.2H3.7V2.2C3.7,2.1,3.6,2,3.5,2S3.3,2.1,3.3,2.2v0.1H3.2 C3.1,2.3,3,2.4,3,2.5S3.1,2.7,3.2,2.7z"></path><path d="M2.2,2.7L2.2,2.7L2.2,2.7C2.3,2.9,2.4,3,2.5,3c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V2.7h0.1 c0.1,0,0.1,0,0.2-0.1C3,2.6,3,2.6,3,2.5c0-0.1-0.1-0.2-0.2-0.2H2.7V2.2C2.7,2.1,2.6,2,2.5,2S2.3,2.1,2.3,2.2v0.1H2.2 C2.1,2.3,2,2.4,2,2.5S2.1,2.7,2.2,2.7z"></path><path d="M0.3,1.2L0.3,1.2L0.3,1.2C0.1,1.3,0,1.4,0,1.5s0.1,0.2,0.2,0.2h0.1v0.1C0.3,1.9,0.4,2,0.5,2 c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V1.7h0.1c0.1,0,0.1,0,0.2-0.1C1,1.6,1,1.6,1,1.5c0-0.1-0.1-0.2-0.2-0.2H0.7V1.2 C0.7,1.1,0.6,1,0.5,1S0.3,1.1,0.3,1.2z"></path><path d="M0.8,3.3L0.8,3.3L0.8,3.3C0.7,3.1,0.6,3,0.5,3S0.3,3.1,0.3,3.2v0.1H0.2C0.1,3.3,0,3.4,0,3.5s0.1,0.2,0.2,0.2 h0.1v0.1C0.3,3.9,0.4,4,0.5,4c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V3.7h0.1c0.1,0,0.1,0,0.2-0.1C1,3.6,1,3.6,1,3.5 C1,3.4,0.9,3.3,0.8,3.3z"></path><path d="M1.8,3.3L1.8,3.3L1.8,3.3C1.7,3.1,1.6,3,1.5,3S1.3,3.1,1.3,3.2v0.1H1.2C1.1,3.3,1,3.4,1,3.5s0.1,0.2,0.2,0.2 h0.1v0.1C1.3,3.9,1.4,4,1.5,4c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V3.7h0.1c0.1,0,0.1,0,0.2-0.1C2,3.6,2,3.6,2,3.5 C2,3.4,1.9,3.3,1.8,3.3z"></path><path d="M4.8,3.3L4.8,3.3L4.8,3.3C4.7,3.1,4.6,3,4.5,3S4.3,3.1,4.3,3.2v0.1H4.2C4.1,3.3,4,3.4,4,3.5s0.1,0.2,0.2,0.2 h0.1v0.1C4.3,3.9,4.4,4,4.5,4c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V3.7h0.1c0.1,0,0.1,0,0.2-0.1C5,3.6,5,3.6,5,3.5 C5,3.4,4.9,3.3,4.8,3.3z"></path><path d="M5.8,4.3L5.8,4.3L5.8,4.3C5.7,4.1,5.6,4,5.5,4S5.3,4.1,5.3,4.2v0.1H5.2C5.1,4.3,5,4.4,5,4.5s0.1,0.2,0.2,0.2 h0.1v0.1C5.3,4.9,5.4,5,5.5,5c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V4.7h0.1c0.1,0,0.1,0,0.2-0.1C6,4.6,6,4.6,6,4.5 C6,4.4,5.9,4.3,5.8,4.3z"></path><path d="M3.8,5.3L3.8,5.3L3.8,5.3C3.7,5.1,3.6,5,3.5,5S3.3,5.1,3.3,5.2v0.1H3.2C3.1,5.3,3,5.4,3,5.5s0.1,0.2,0.2,0.2 h0.1v0.1C3.3,5.9,3.4,6,3.5,6c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V5.7h0.1c0.1,0,0.1,0,0.2-0.1C4,5.6,4,5.6,4,5.5 C4,5.4,3.9,5.3,3.8,5.3z"></path><path d="M2.8,5.3L2.8,5.3L2.8,5.3C2.7,5.1,2.6,5,2.5,5S2.3,5.1,2.3,5.2v0.1H2.2C2.1,5.3,2,5.4,2,5.5s0.1,0.2,0.2,0.2 h0.1v0.1C2.3,5.9,2.4,6,2.5,6c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V5.7h0.1c0.1,0,0.1,0,0.2-0.1C3,5.6,3,5.6,3,5.5 C3,5.4,2.9,5.3,2.8,5.3z"></path><path d="M0.8,5.3L0.8,5.3L0.8,5.3C0.7,5.1,0.6,5,0.5,5S0.3,5.1,0.3,5.2v0.1H0.2C0.1,5.3,0,5.4,0,5.5s0.1,0.2,0.2,0.2 h0.1v0.1C0.3,5.9,0.4,6,0.5,6c0.1,0,0.1,0,0.2-0.1s0.1-0.1,0.1-0.2V5.7h0.1c0.1,0,0.1,0,0.2-0.1C1,5.6,1,5.6,1,5.5 C1,5.4,0.9,5.3,0.8,5.3z"></path></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="x"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><path d="M0.5,0.9L0.5,0.9C0.6,1,0.7,1,0.7,1s0.1,0,0.2-0.1C1,0.8,1,0.7,0.9,0.6L0.9,0.5l0.1-0.1C1,0.3,1,0.2,0.9,0.1 S0.7,0,0.6,0.1L0.5,0.1L0.4,0.1C0.3,0,0.2,0,0.1,0.1C0,0.2,0,0.3,0.1,0.4l0.1,0.1L0.1,0.6C0,0.7,0,0.8,0.1,0.9C0.1,1,0.2,1,0.3,1 C0.3,1,0.4,1,0.5,0.9L0.5,0.9z"></path><path d="M2.1,0.9C2.1,1,2.2,1,2.3,1c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1C2.6,1,2.7,1,2.7,1s0.1,0,0.2-0.1 C3,0.8,3,0.7,2.9,0.6L2.9,0.5l0.1-0.1C3,0.3,3,0.2,2.9,0.1S2.7,0,2.6,0.1L2.5,0.1L2.4,0.1C2.3,0,2.2,0,2.1,0.1S2,0.3,2.1,0.4 l0.1,0.1L2.1,0.6C2,0.7,2,0.8,2.1,0.9z"></path><path d="M4.9,0.5L4.9,0.5C5,0.4,5,0.3,5,0.3s0-0.1-0.1-0.2C4.8,0,4.7,0,4.6,0.1L4.5,0.1L4.4,0.1C4.3,0,4.2,0,4.1,0.1 S4,0.3,4.1,0.4l0.1,0.1L4.1,0.6C4,0.7,4,0.8,4.1,0.9C4.1,1,4.2,1,4.3,1c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1C4.6,1,4.7,1,4.7,1 s0.1,0,0.2-0.1C5,0.9,5,0.8,5,0.7C5,0.7,5,0.6,4.9,0.5L4.9,0.5z"></path><path d="M5.9,0.5L5.9,0.5C6,0.3,6,0.2,5.9,0.1S5.7,0,5.6,0.1L5.5,0.1L5.4,0.1C5.3,0,5.2,0,5.1,0.1C5,0.1,5,0.2,5,0.3 s0,0.1,0.1,0.2l0.1,0.1L5.1,0.6C5,0.6,5,0.7,5,0.7c0,0.1,0,0.1,0.1,0.2C5.1,1,5.2,1,5.3,1c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1 C5.6,1,5.7,1,5.7,1s0.1,0,0.2-0.1C6,0.8,6,0.7,5.9,0.5L5.9,0.5z"></path><path d="M4.5,1.1L4.5,1.1C4.4,1,4.3,1,4.3,1S4.1,1,4.1,1.1C4,1.1,4,1.2,4,1.3s0,0.1,0.1,0.2l0.1,0.1L4.1,1.6 C4,1.6,4,1.7,4,1.7c0,0.1,0,0.1,0.1,0.2C4.1,2,4.2,2,4.3,2c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1C4.6,2,4.7,2,4.7,2s0.1,0,0.2-0.1 C5,1.8,5,1.7,4.9,1.6L4.9,1.5l0.1-0.1C5,1.3,5,1.2,4.9,1.1C4.9,1,4.8,1,4.7,1C4.7,1,4.6,1,4.5,1.1L4.5,1.1z"></path><path d="M3.9,1.5L3.9,1.5C4,1.4,4,1.3,4,1.3s0-0.1-0.1-0.2C3.8,1,3.7,1,3.6,1.1L3.5,1.1L3.4,1.1C3.3,1,3.2,1,3.1,1.1 C3,1.2,3,1.3,3.1,1.4l0.1,0.1L3.1,1.6C3,1.7,3,1.8,3.1,1.9C3.1,2,3.2,2,3.3,2c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1 C3.6,2,3.7,2,3.7,2s0.1,0,0.2-0.1C4,1.9,4,1.8,4,1.7C4,1.7,4,1.6,3.9,1.5L3.9,1.5z"></path><path d="M2.1,2.9C2.1,3,2.2,3,2.3,3c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1C2.6,3,2.7,3,2.7,3s0.1,0,0.2-0.1 C3,2.8,3,2.7,2.9,2.6L2.9,2.5l0.1-0.1C3,2.3,3,2.2,2.9,2.1C2.8,2,2.7,2,2.6,2.1L2.5,2.1L2.4,2.1C2.3,2,2.2,2,2.1,2.1 C2,2.2,2,2.3,2.1,2.4l0.1,0.1L2.1,2.6C2,2.7,2,2.8,2.1,2.9z"></path><path d="M0.1,1.9C0.1,2,0.2,2,0.3,2c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1C0.6,2,0.7,2,0.7,2s0.1,0,0.2-0.1 C1,1.8,1,1.7,0.9,1.6L0.9,1.5l0.1-0.1C1,1.3,1,1.2,0.9,1.1C0.9,1,0.8,1,0.7,1C0.7,1,0.6,1,0.6,1.1L0.5,1.1L0.4,1.1 C0.4,1,0.3,1,0.3,1S0.1,1,0.1,1.1C0,1.2,0,1.3,0.1,1.4l0.1,0.1L0.1,1.6C0,1.7,0,1.8,0.1,1.9z"></path><path d="M0.9,3.5L0.9,3.5C1,3.4,1,3.3,1,3.3s0-0.1-0.1-0.2C0.8,3,0.7,3,0.6,3.1L0.5,3.1L0.4,3.1C0.3,3,0.2,3,0.1,3.1 C0,3.2,0,3.3,0.1,3.4l0.1,0.1L0.1,3.6C0,3.7,0,3.8,0.1,3.9C0.1,4,0.2,4,0.3,4c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1 C0.6,4,0.7,4,0.7,4s0.1,0,0.2-0.1C1,3.9,1,3.8,1,3.7C1,3.7,1,3.6,0.9,3.5L0.9,3.5z"></path><path d="M1.9,3.6L1.9,3.6V3.4C2,3.3,2,3.2,1.9,3.1C1.8,3,1.7,3,1.6,3.1L1.5,3.1L1.4,3.1C1.3,3,1.2,3,1.1,3.1 C1,3.1,1,3.2,1,3.3s0,0.1,0.1,0.2l0.1,0.1L1.1,3.6C1,3.6,1,3.7,1,3.7c0,0.1,0,0.1,0.1,0.2C1.1,4,1.2,4,1.3,4c0.1,0,0.1,0,0.2-0.1 l0.1-0.1l0.1,0.1C1.6,4,1.7,4,1.7,4s0.1,0,0.2-0.1C2,3.8,2,3.7,1.9,3.6z"></path><path d="M4.9,3.6L4.9,3.6V3.4C5,3.3,5,3.2,4.9,3.1C4.8,3,4.7,3,4.6,3.1L4.5,3.1L4.4,3.1C4.3,3,4.2,3,4.1,3.1 C4,3.2,4,3.3,4.1,3.4l0.1,0.1L4.1,3.6C4,3.7,4,3.8,4.1,3.9C4.1,4,4.2,4,4.3,4c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1 C4.6,4,4.7,4,4.7,4s0.1,0,0.2-0.1C5,3.8,5,3.7,4.9,3.6z"></path><path d="M5.9,4.1C5.8,4,5.7,4,5.6,4.1L5.5,4.1L5.4,4.1C5.3,4,5.2,4,5.1,4.1C5,4.2,5,4.3,5.1,4.4l0.1,0.1L5.1,4.6 C5,4.7,5,4.8,5.1,4.9C5.1,5,5.2,5,5.3,5c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1C5.6,5,5.7,5,5.7,5s0.1,0,0.2-0.1C6,4.8,6,4.7,5.9,4.6 L5.9,4.5l0.1-0.1C6,4.3,6,4.2,5.9,4.1z"></path><path d="M3.9,5.1C3.8,5,3.7,5,3.6,5.1L3.5,5.1L3.4,5.1C3.3,5,3.2,5,3.1,5.1C3,5.1,3,5.2,3,5.3s0,0.1,0.1,0.2l0.1,0.1 L3.1,5.6C3,5.6,3,5.7,3,5.7c0,0.1,0,0.1,0.1,0.2C3.1,6,3.2,6,3.3,6c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1C3.6,6,3.7,6,3.7,6 s0.1,0,0.2-0.1C4,5.8,4,5.7,3.9,5.6L3.9,5.5l0.1-0.1C4,5.3,4,5.2,3.9,5.1z"></path><path d="M2.9,5.5L2.9,5.5C3,5.4,3,5.3,3,5.3s0-0.1-0.1-0.2C2.8,5,2.7,5,2.6,5.1L2.5,5.1L2.4,5.1C2.3,5,2.2,5,2.1,5.1 C2,5.2,2,5.3,2.1,5.4l0.1,0.1L2.1,5.6C2,5.7,2,5.8,2.1,5.9C2.1,6,2.2,6,2.3,6c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1 C2.6,6,2.7,6,2.7,6s0.1,0,0.2-0.1C3,5.9,3,5.8,3,5.7C3,5.7,3,5.6,2.9,5.5L2.9,5.5z"></path><path d="M0.9,5.1C0.8,5,0.7,5,0.6,5.1L0.5,5.1L0.4,5.1C0.3,5,0.2,5,0.1,5.1C0,5.2,0,5.3,0.1,5.4l0.1,0.1L0.1,5.6 C0,5.7,0,5.8,0.1,5.9C0.1,6,0.2,6,0.3,6c0.1,0,0.1,0,0.2-0.1l0.1-0.1l0.1,0.1C0.6,6,0.7,6,0.7,6s0.1,0,0.2-0.1C1,5.8,1,5.7,0.9,5.6 L0.9,5.5l0.1-0.1C1,5.3,1,5.2,0.9,5.1z"></path></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="heart"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><path d="M0.8,0C0.7,0,0.6,0,0.5,0.1C0.4,0,0.4,0,0.3,0C0.1,0,0,0.1,0,0.3c0,0.1,0,0.1,0,0.2l0,0L0.5,1l0.4-0.5 C1,0.4,1,0.3,1,0.3C1,0.1,0.9,0,0.8,0z"></path><path d="M2.8,0C2.7,0,2.6,0,2.5,0.1C2.4,0,2.4,0,2.3,0C2.1,0,2,0.1,2,0.3c0,0.1,0,0.1,0,0.2l0,0L2.5,1l0.4-0.5 C3,0.4,3,0.3,3,0.3C3,0.1,2.9,0,2.8,0z"></path><path d="M4.8,0C4.7,0,4.6,0,4.5,0.1C4.4,0,4.4,0,4.3,0C4.1,0,4,0.1,4,0.3c0,0.1,0,0.1,0,0.2l0,0L4.5,1l0.4-0.5 C5,0.4,5,0.3,5,0.3C5,0.1,4.9,0,4.8,0z"></path><path d="M5,0.5L5.5,1l0.4-0.5C6,0.4,6,0.3,6,0.3C6,0.1,5.9,0,5.8,0C5.7,0,5.6,0,5.5,0.1C5.4,0,5.4,0,5.3,0 C5.1,0,5,0.1,5,0.3C5,0.3,5,0.4,5,0.5L5,0.5z"></path><path d="M4.8,1C4.7,1,4.6,1,4.5,1.1C4.4,1,4.4,1,4.3,1C4.1,1,4,1.1,4,1.3c0,0.1,0,0.1,0,0.2l0,0L4.5,2l0.4-0.5 C5,1.4,5,1.3,5,1.3C5,1.1,4.9,1,4.8,1z"></path><path d="M3.8,1C3.7,1,3.6,1,3.5,1.1C3.4,1,3.4,1,3.3,1C3.1,1,3,1.1,3,1.3c0,0.1,0,0.1,0,0.2l0,0L3.5,2l0.4-0.5 C4,1.4,4,1.3,4,1.3C4,1.1,3.9,1,3.8,1z"></path><path d="M2.8,2C2.7,2,2.6,2,2.5,2.1C2.4,2,2.4,2,2.3,2C2.1,2,2,2.1,2,2.3c0,0.1,0,0.1,0,0.2l0,0L2.5,3l0.4-0.5 C3,2.4,3,2.3,3,2.3C3,2.1,2.9,2,2.8,2z"></path><path d="M0.8,1C0.7,1,0.6,1,0.5,1.1C0.4,1,0.4,1,0.3,1C0.1,1,0,1.1,0,1.3c0,0.1,0,0.1,0,0.2l0,0L0.5,2l0.4-0.5 C1,1.4,1,1.3,1,1.3C1,1.1,0.9,1,0.8,1z"></path><path d="M0.8,3C0.7,3,0.6,3,0.5,3.1C0.4,3,0.4,3,0.3,3C0.1,3,0,3.1,0,3.3c0,0.1,0,0.1,0,0.2l0,0L0.5,4l0.4-0.5 C1,3.4,1,3.3,1,3.3C1,3.1,0.9,3,0.8,3z"></path><path d="M1.8,3C1.7,3,1.6,3,1.5,3.1C1.4,3,1.4,3,1.3,3C1.1,3,1,3.1,1,3.3c0,0.1,0,0.1,0,0.2l0,0L1.5,4l0.4-0.5 C2,3.4,2,3.3,2,3.3C2,3.1,1.9,3,1.8,3z"></path><path d="M4.8,3C4.7,3,4.6,3,4.5,3.1C4.4,3,4.4,3,4.3,3C4.1,3,4,3.1,4,3.3c0,0.1,0,0.1,0,0.2l0,0L4.5,4l0.4-0.5 C5,3.4,5,3.3,5,3.3C5,3.1,4.9,3,4.8,3z"></path><path d="M5.8,4C5.7,4,5.6,4,5.5,4.1C5.4,4,5.4,4,5.3,4C5.1,4,5,4.1,5,4.3c0,0.1,0,0.1,0,0.2l0,0L5.5,5l0.4-0.5 C6,4.4,6,4.3,6,4.3C6,4.1,5.9,4,5.8,4z"></path><path d="M3.8,5C3.7,5,3.6,5,3.5,5.1C3.4,5,3.4,5,3.3,5C3.1,5,3,5.1,3,5.3c0,0.1,0,0.1,0,0.2l0,0L3.5,6l0.4-0.5 C4,5.4,4,5.3,4,5.3C4,5.1,3.9,5,3.8,5z"></path><path d="M2.8,5C2.7,5,2.6,5,2.5,5.1C2.4,5,2.4,5,2.3,5C2.1,5,2,5.1,2,5.3c0,0.1,0,0.1,0,0.2l0,0L2.5,6l0.4-0.5 C3,5.4,3,5.3,3,5.3C3,5.1,2.9,5,2.8,5z"></path><path d="M0.8,5C0.7,5,0.6,5,0.5,5.1C0.4,5,0.4,5,0.3,5C0.1,5,0,5.1,0,5.3c0,0.1,0,0.1,0,0.2l0,0L0.5,6l0.4-0.5 C1,5.4,1,5.3,1,5.3C1,5.1,0.9,5,0.8,5z"></path></svg></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="pattern" value="shake"> <svg width="38" height="38" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><rect x="0.1" y="0.1" transform="matrix(0.9962 -8.720575e-02 8.720575e-02 0.9962 -4.170330e-02 4.550928e-02)" width="0.8" height="0.8"></rect><rect x="2.1" y="0.1" transform="matrix(6.981014e-02 -0.9976 0.9976 6.981014e-02 1.8266 2.9591)" width="0.8" height="0.8"></rect><rect x="4.1" y="0.1" transform="matrix(0.1045 -0.9945 0.9945 0.1045 3.5323 4.9232)" width="0.8" height="0.8"></rect><rect x="5.1" y="0.1" transform="matrix(0.9962 -8.713004e-02 8.713004e-02 0.9962 -2.265348e-02 0.4811)" width="0.8" height="0.8"></rect><rect x="4.1" y="1.1" transform="matrix(0.9986 -5.233859e-02 5.233859e-02 0.9986 -7.234332e-02 0.2376)" width="0.8" height="0.8"></rect><rect x="3.1" y="1.1" transform="matrix(0.1736 -0.9848 0.9848 0.1736 1.415 4.6864)" width="0.8" height="0.8"></rect><rect x="2.1" y="2.1" transform="matrix(0.9962 -8.720575e-02 8.720575e-02 0.9962 -0.2085 0.2275)" width="0.8" height="0.8"></rect><rect x="0.1" y="1.1" transform="matrix(5.233460e-02 -0.9986 0.9986 5.233460e-02 -1.0241 1.9209)" width="0.8" height="0.8"></rect><rect x="0.1" y="3.1" transform="matrix(0.9998 -1.747158e-02 1.747158e-02 0.9998 -6.107527e-02 9.270038e-03)" width="0.8" height="0.8"></rect><rect x="1.1" y="3.1" transform="matrix(3.486695e-02 -0.9994 0.9994 3.486695e-02 -2.0502 4.8771)" width="0.8" height="0.8"></rect><rect x="4.1" y="3.1" transform="matrix(0.1564 -0.9877 0.9877 0.1564 0.3392 7.3973)" width="0.8" height="0.8"></rect><rect x="5.1" y="4.1" transform="matrix(0.1045 -0.9945 0.9945 0.1045 0.4498 9.4996)" width="0.8" height="0.8"></rect><rect x="3.1" y="5.1" transform="matrix(0.9962 -8.720575e-02 8.720575e-02 0.9962 -0.4663 0.3262)" width="0.8" height="0.8"></rect><rect x="2.1" y="5.1" transform="matrix(8.719913e-02 -0.9962 0.9962 8.719913e-02 -3.1971 7.511)" width="0.8" height="0.8"></rect><rect x="0.1" y="5.1" transform="matrix(8.719913e-02 -0.9962 0.9962 8.719913e-02 -5.0227 5.5186)" width="0.8" height="0.8"></rect></svg></label></div></div> <div class="col-sm-12"><h6 style="margin-bottom: 10px;">Market border</h6></div> <div class="col-sm-12 mb-2"><div class="btn-group-toggle styleselecta d-inline-block"><label class="btn btn-light p-2 hoversquares activesquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="default" checked="checked"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,0v14h14V0H0z M12,12H2V2h10V12z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="rounded"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4.5,14h5.1C12,14,14,12,14,9.6V4.5C14,2,12,0,9.5,0H4.4C2,0,0,2,0,4.4v5.1C0,12,2,14,4.5,14z M12,4.8v4.4 c0,1.5-1.3,2.8-2.8,2.8H4.8C3.2,12,2,10.8,2,9.2V4.8C2,3.3,3.3,2,4.8,2h4.4C10.8,2,12,3.2,12,4.8z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="circle"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,7L0,7c0,3.9,3.1,7,7,7h0c3.9,0,7-3.1,7-7v0c0-3.9-3.1-7-7-7h0C3.1,0,0,3.1,0,7z M7,12L7,12c-2.8,0-5-2.2-5-5v0 c0-2.8,2.2-5,5-5h0c2.8,0,5,2.2,5,5v0C12,9.8,9.8,12,7,12z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="flurry"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0.2,0.1L0.1,0.6l0.1,0.5L0.2,1.6L0.1,2.1l0.1,0.5L0,3.1l0,0.5L0,4l0.1,0.5l0,0.5l0.1,0.5L0.1,6l0,0.5l0,0.5 l0.2,0.5L0.1,8l0.1,0.5L0,8.9l0.2,0.5L0,9.9l0.2,0.5l-0.1,0.5l0,0.5L0,11.9l0.2,0.5l-0.1,0.5l0.1,0.5l0,0.4L0.6,14l0.5,0l0.5-0.1 l0.5,0.1l0.5,0.1L3.1,14l0.5-0.1l0.5-0.1l0.5,0L5,13.9l0.5-0.1l0.5,0l0.5,0L7,13.9L7.5,14L8,14l0.5-0.2L9,13.9L9.4,14l0.5-0.2 l0.5,0.2l0.5-0.1l0.5,0l0.5-0.1l0.5,0l0.5,0l0.5,0l0.5,0.1l-0.1-0.5l0.2-0.5l-0.1-0.5l-0.1-0.5l0.2-0.5l-0.2-0.5l0.1-0.5L14,9.9 l-0.2-0.5L13.9,9L14,8.5L14,8l-0.2-0.5l0-0.5l0.1-0.5L13.8,6l0-0.5L14,5l0-0.5l-0.1-0.5l0.1-0.5l-0.2-0.5l0.1-0.5l0-0.5l0-0.5 l-0.1-0.5L14,0.6l-0.2-0.4l-0.4,0l-0.5,0L12.4,0l-0.5,0.2l-0.5,0l-0.5-0.1l-0.5,0L10,0l-0.5,0L9,0L8.5,0.2L8,0.2L7.5,0.1L7,0.1 L6.5,0.2L6,0L5.5,0.2L5.1,0.2L4.6,0.1L4.1,0.1L3.6,0L3.1,0.1L2.6,0L2.1,0.1l-0.5,0l-0.5,0L0.6,0.2L0.2,0.1z M11.9,11.9l-0.5-0.1 L10.9,12l-0.5-0.1L10,11.9l-0.5,0.1L9,11.8l-0.5,0l-0.5,0l-0.5,0.1l-0.5,0L6.5,12L6,11.9l-0.5,0l-0.5,0L4.6,12l-0.5-0.2L3.6,12 l-0.5-0.1L2.6,12l-0.4-0.1L2,11.4l0.1-0.5l0-0.5l0.1-0.5L2,9.5L2.1,9L2,8.5L2,8l0.2-0.5l0-0.5L2,6.5L2.1,6l0.1-0.5L2.2,5L2.1,4.5 L2,4.1l0-0.5l0.2-0.5L2,2.6L2,2l0.5,0l0.5,0.1l0.5,0.1l0.5,0L4.5,2L5,2.1l0.5,0.1L6,2l0.5,0.2L7,2.1l0.5,0L8,2l0.5,0L9,2l0.5,0 l0.5,0.1L10.4,2l0.5,0.2L11.4,2L12,2l-0.1,0.6L12,3.1l-0.1,0.5L11.8,4L12,4.5L11.9,5l-0.1,0.5l0,0.5L12,6.5L12,7l-0.1,0.5L12,8 l0,0.5l-0.2,0.5l0,0.5l0.1,0.5l-0.1,0.5l0.2,0.5l-0.1,0.5L11.9,11.9z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="sdoz"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,0l0.9,13c0,0.6,0.5,1,1,1h12V2c0-0.6-0.4-1-1-1L0,0z M12,12H3.8c-0.5,0-1-0.4-1-1L2,2l9,0.7c0.5,0,1,0.5,1,1 V12z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="drop_in"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,0l0,7c0,3.9,3.1,7,7,7h0c3.9,0,7-3.1,7-7v0c0-3.9-3.1-7-7-7H0z M7,12L7,12c-2.8,0-5-2.2-5-5V2h5c2.8,0,5,2.2,5,5v0 C12,9.8,9.8,12,7,12z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="drop"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,7L0,7c0,3.9,3.1,7,7,7h7V7c0-3.9-3.1-7-7-7h0C3.1,0,0,3.1,0,7z M12,12H7c-2.8,0-5-2.2-5-5v0c0-2.8,2.2-5,5-5h0 c2.8,0,5,2.2,5,5V12z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="dropeye"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,0l0,7c0,3.9,3.1,7,7,7h7V7c0-3.9-3.1-7-7-7H0z M12,12H7c-2.8,0-5-2.2-5-5V2h5c2.8,0,5,2.2,5,5V12z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="dropeyeleft"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,0l0,7c0,3.9,3.1,7,7,7h7V7c0-3.9-3.1-7-7-7H0z M12,12H7c-2.8,0-5-2.2-5-5v0c0-2.8,2.2-5,5-5h0c2.8,0,5,2.2,5,5V12z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="dropeyeleaf"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,0l0,7c0,3.9,3.1,7,7,7h7V7c0-3.9-3.1-7-7-7H0z M7,12L7,12c-2.8,0-5-2.2-5-5v0c0-2.8,2.2-5,5-5h0c2.8,0,5,2.2,5,5v0 C12,9.8,9.8,12,7,12z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="dropeyeright"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,0l0,7c0,3.9,3.1,7,7,7h7V7c0-3.9-3.1-7-7-7H0z M7,12L7,12c-2.8,0-5-2.2-5-5V2h5c2.8,0,5,2.2,5,5v0C12,9.8,9.8,12,7,12z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="squarecircle"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,0l0,14h14V0H0z M7,12L7,12c-2.8,0-5-2.2-5-5v0c0-2.8,2.2-5,5-5h0c2.8,0,5,2.2,5,5v0C12,9.8,9.8,12,7,12z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="flower"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,0v9.6C0,12,2,14,4.4,14h5.1C12,14,14,12,14,9.6V4.4C14,2,12,0,9.6,0H0z M9.2,12H4.8C3.3,12,2,10.7,2,9.2V2h7.2 C10.7,2,12,3.3,12,4.8v4.4C12,10.7,10.7,12,9.2,12z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="flower_in"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14,14V4.4C14,2,12,0,9.6,0H4.4C2,0,0,2,0,4.4v5.1C0,12,2,14,4.4,14H14z M4.8,2h4.4C10.7,2,12,3.3,12,4.8V12H4.8 C3.3,12,2,10.7,2,9.2V4.8C2,3.3,3.3,2,4.8,2z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker" value="leaf"> <svg width="32" height="32" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,0v9.6C0,12,2,14,4.4,14H14V4.4C14,2,12,0,9.6,0H0z M12,12H4.8C3.3,12,2,10.7,2,9.2V2h7.2C10.7,2,12,3.3,12,4.8V12z"></path></svg></label></div></div> <div class="col-sm-12"><h6 style="margin-bottom: 10px;">Market center</h6></div> <div class="col-sm-12 mb-4"><div class="btn-group-toggle styleselecta d-inline-block"><label class="btn btn-light p-2 hoversquares activesquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="default" checked="checked"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect width="6" height="6"></rect></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="rounded"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6,1.7v2.7C6,5.2,5.2,6,4.3,6H1.7C0.7,6,0,5.3,0,4.3V1.7C0,0.8,0.8,0,1.7,0h2.7C5.3,0,6,0.7,6,1.7z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="circle"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="3" r="3"></circle></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="flurry"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><polygon points="5.9,5.9 5.6,5.9 5.3,6 5,5.7 4.7,5.8 4.4,5.8 4.1,5.8 3.9,5.7 3.6,5.7 3.3,5.8 3,5.9 2.7,5.8 2.4,5.8 2.1,5.8 1.9,5.7 1.6,5.7 1.3,5.7 1,5.8 0.7,5.8 0.4,5.8 0.1,5.9 0,5.5 0.1,5.3 0,5 0.3,4.7 0.3,4.4 0.2,4.1 0.2,3.8 0.1,3.5 0.3,3.3 0.1,3 0.1,2.7 0.2,2.4 0.1,2.1 0.1,1.8 0.1,1.5 0.2,1.3 0.3,1 0,0.7 0,0.4 0.3,0.2 0.4,0.1 0.7,0.1 1,0.2 1.3,0.1 1.6,0.3 1.9,0.1 2.1,0.1 2.4,0.2 2.7,0.1 3,0.3 3.3,0.2 3.6,0.2 3.8,0.2 4.1,0.1 4.4,0.3 4.7,0.1 5,0.2 5.3,0.1 5.6,0 5.9,0 5.8,0.4 6,0.7 6,1 5.9,1.2 5.7,1.5 5.7,1.8 5.9,2.1 5.7,2.4 5.8,2.7 6,3 5.9,3.3 5.8,3.5 5.8,3.8 5.8,4.1 6,4.4 5.8,4.7 5.7,5 5.7,5.3 5.8,5.5"></polygon></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="sdoz"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><polygon points="6,6 0.5,6 0,0 6,0.5"></polygon></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="drop_in"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3,6L3,6C1.3,6,0,4.7,0,3l0-3l3,0c1.7,0,3,1.3,3,3v0C6,4.7,4.7,6,3,6z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="drop"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6,6H3C1.3,6,0,4.7,0,3v0c0-1.7,1.3-3,3-3h0c1.7,0,3,1.3,3,3V6z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="dropeye"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6,6H3C1.3,6,0,4.7,0,3l0-3l3,0c1.7,0,3,1.3,3,3V6z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="sun"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><polygon points="3,0 3.4,0.7 4,0.2 4.1,0.9 4.9,0.7 4.8,1.5 5.6,1.5 5.2,2.2 5.9,2.5 5.3,3 5.9,3.5 5.2,3.8 5.6,4.5 4.8,4.5 4.9,5.3 4.1,5.1 4,5.8 3.4,5.3 3,6 2.5,5.3 1.9,5.8 1.8,5.1 1,5.3 1.1,4.5 0.4,4.5 0.7,3.8 0,3.5 0.6,3 0,2.5 0.7,2.2 0.4,1.5 1.1,1.5 1,0.7 1.8,0.9 1.9,0.2 2.5,0.7"></polygon></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="star"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3.2,0.3l0.6,1.3C4,1.8,4.1,1.9,4.3,1.9l1.4,0.2c0.2,0,0.3,0.3,0.2,0.5l-1,1C4.7,3.7,4.7,3.9,4.7,4.1L5,5.5 c0,0.2-0.2,0.4-0.4,0.3L3.3,5.2c-0.2-0.1-0.4-0.1-0.6,0L1.4,5.8C1.2,5.9,1,5.8,1,5.5l0.2-1.4c0-0.2,0-0.4-0.2-0.5l-1-1 C-0.1,2.4,0,2.2,0.2,2.1l1.4-0.2c0.2,0,0.4-0.2,0.5-0.3l0.6-1.3C2.9,0.1,3.1,0.1,3.2,0.3z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="diamond"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="0.9" y="0.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -1.2426 3)" width="4.2" height="4.2"></rect></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="danger"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><polygon points="3,5.1 3.9,6 6,6 6,3.9 5.1,3 6,2.1 6,0 3.9,0 3,0.9 2.1,0 0,0 0,2.1 0.9,3 0,3.9 0,6 2.1,6"></polygon></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="cross"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><polygon points="6,1.5 4.5,1.5 4.5,0 1.5,0 1.5,1.5 0,1.5 0,4.5 1.5,4.5 1.5,6 4.5,6 4.5,4.5 6,4.5"></polygon></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="plus"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4.5,1.5L4.5,1.5L4.5,1.5C4.5,0.7,3.8,0,3,0h0C2.2,0,1.5,0.7,1.5,1.5v0h0C0.7,1.5,0,2.2,0,3v0 c0,0.8,0.7,1.5,1.5,1.5h0v0C1.5,5.3,2.2,6,3,6h0c0.8,0,1.5-0.7,1.5-1.5v0h0C5.3,4.5,6,3.8,6,3v0C6,2.2,5.3,1.5,4.5,1.5z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="x"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3,5.1l0.4,0.4C3.7,5.8,4.1,6,4.5,6h0C5.3,6,6,5.3,6,4.5v0c0-0.4-0.2-0.8-0.4-1.1L5.1,3l0.4-0.4 C5.8,2.3,6,1.9,6,1.5v0C6,0.7,5.3,0,4.5,0h0C4.1,0,3.7,0.2,3.4,0.4L3,0.9L2.6,0.4C2.3,0.2,1.9,0,1.5,0h0C0.7,0,0,0.7,0,1.5v0 c0,0.4,0.2,0.8,0.4,1.1L0.9,3L0.4,3.4C0.2,3.7,0,4.1,0,4.5v0C0,5.3,0.7,6,1.5,6h0c0.4,0,0.8-0.2,1.1-0.4L3,5.1z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="marker_in" value="heart"> <svg width="20" height="20" viewBox="0 0 6 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6,1.8C5.9,1,5.3,0.4,4.5,0.3C3.9,0.2,3.4,0.5,3,0.9C2.6,0.5,2.1,0.3,1.6,0.3C0.8,0.4,0.1,1,0,1.8 C0,2.3,0.1,2.7,0.3,3l0,0l0,0c0.1,0.1,0.2,0.2,0.3,0.3l1.9,2.2c0.3,0.3,0.7,0.3,0.9,0l1.8-1.9c0.1-0.1,0.3-0.3,0.4-0.5 C5.9,2.8,6.1,2.3,6,1.8z"></path></svg></label></div></div></div></div> <div class="card card-sm card-body shadow-sm" style="border: 0.1rem solid rgb(227, 236, 242) !important;"><a href="https://qr.io/dashboard/edit-colorandshape/bNTVoc#panel-6" data-target="#panel-6" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="panel-6" class="accordion-panel-header"><span class="icon-title h6 mb-0 font-weight-bold"><i class="fas fa-images"></i>Logo</span> <span class="icon"><i class="fas fa-plus"></i></span></a> <div id="panel-6" class="collapse show" style=""><div class="pt-3"><div class="col-12 pt-2"><h6 style="margin-bottom: 10px;">Upload Logo</h6> <div class="custom-file" style="margin-bottom: 20px;"><input type="file" multiple="multiple" accept=".jpg, .jpeg, .png, .svg" name="image" id="customFile" class="custom-file-input"> <label for="customFile" class="custom-file-label">Choose file</label></div> <!----> <h6 style="margin-bottom: 10px;">Or choose from here</h6> <div class="logoselecta form-group"><div class="btn-group-toggle"><label class="btn btn-light p-1 hoversquares activesquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="none"><img src="./qrcode2_files/x.png" class="img-fluid" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/01-link.png" id="optionlogo0"><img src="./qrcode2_files/01-link.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/02-location.png" id="optionlogo1"><img src="./qrcode2_files/02-location.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/03-email.png" id="optionlogo2"><img src="./qrcode2_files/03-email.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/04-whatsapp.png" id="optionlogo3"><img src="./qrcode2_files/04-whatsapp.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/05-wifi.png" id="optionlogo4"><img src="./qrcode2_files/05-wifi.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/06-vcard.png" id="optionlogo5"><img src="./qrcode2_files/06-vcard.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/07-paypal.png" id="optionlogo6"><img src="./qrcode2_files/07-paypal.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/08-btc.png" id="optionlogo7"><img src="./qrcode2_files/08-btc.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/scan-me-frame.png" id="optionlogo7"><img src="./qrcode2_files/scan-me-frame.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/scan-me.png" id="optionlogo7"><img src="./qrcode2_files/scan-me.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/scanning-qr-code.png" id="optionlogo7"><img src="./qrcode2_files/scanning-qr-code.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/menu.png" id="optionlogo7"><img src="./qrcode2_files/menu.png" style="width: 50px;"></label> <label class="btn btn-light p-1 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="optionlogo" value="/images/watermarks/menu-fork.png" id="optionlogo7"><img src="./qrcode2_files/menu-fork.png" style="width: 50px;"></label> </div></div> <div class="custom-control custom-switch mt-2"><input type="checkbox" id="nologo-bg" name="no_logo_bg" class="custom-control-input"> <label for="nologo-bg" class="custom-control-label" style="font-weight: 700;">Remove background behind Logo</label></div></div></div></div></div> <div class="card card-sm card-body shadow-sm" style="margin-bottom: 0px; border: 0.1rem solid rgb(227, 236, 242) !important;"><a href="https://qr.io/dashboard/edit-colorandshape/bNTVoc#panel-7" data-target="#panel-7" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="panel-7" class="accordion-panel-header"><span class="icon-title h6 mb-0 font-weight-bold"><i class="fas fa-crop-alt"></i>Frames</span> <span class="icon"><i class="fas fa-plus"></i></span></a> <div id="panel-7" class="collapse show" style=""><div class="pt-3"><div class="col-12 pt-2"><div class="col-sm-12 mb-2"><div class="btn-group-toggle styleselecta d-inline-block"><label class="btn btn-light p-2 hoversquares activesquares" style="margin-bottom: 5px;"><input type="radio" name="frame" value="none" checked="checked"> <img src="./qrcode2_files/x.png" class="img-fluid" style="width: 50px;"></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="frame" value="bottom" checked="checked"> <svg width="50" height="50" viewBox="0 0 24 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.7,0H1.3C0.6,0,0,0.6,0,1.3v25.3C0,27.4,0.6,28,1.3,28h21.3c0.7,0,1.3-0.6,1.3-1.3V1.3C24,0.6,23.4,0,22.7,0 z M23,22c0,0.6-0.5,1-1,1H2c-0.6,0-1-0.5-1-1V2c0-0.6,0.5-1,1-1h20c0.6,0,1,0.5,1,1V22z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="frame" value="top" checked="checked"> <svg width="50" height="50" viewBox="0 0 24 29" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1.3,28L22.6,28c0.7,0,1.3-0.6,1.3-1.3L24,1.4c0-0.7-0.6-1.3-1.3-1.3L1.4,0C0.7,0,0.1,0.6,0,1.3L0,26.6 C-0.1,27.4,0.5,28,1.3,28z M1,6c0-0.6,0.5-1,1-1L22,5c0.6,0,1,0.5,1,1L23,26c0,0.6-0.5,1-1,1L2,27c-0.6,0-1-0.5-1-1L1,6z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="frame" value="balloon-bottom" checked="checked"> <svg width="50" height="50" viewBox="0 0 24 31" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1.3,24l21.3,0c0.7,0,1.3-0.6,1.3-1.3l0-21.3C24,0.6,23.4,0,22.7,0L1.3,0C0.6,0,0,0.6,0,1.3l0,21.3 C0,23.4,0.6,24,1.3,24z M1,2c0-0.6,0.5-1,1-1l20,0c0.6,0,1,0.5,1,1v20c0,0.6-0.5,1-1,1L2,23c-0.6,0-1-0.5-1-1V2z"></path><path d="M1,30h22c0.5,0,1-0.4,1-1v-3c0-0.5-0.4-1-1-1H13l-1-1l-1,1H1c-0.5,0-1,0.4-1,1v3C0,29.6,0.4,30,1,30z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="frame" value="balloon-top" checked="checked"> <svg width="50" height="50" viewBox="0 0 24 31" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.7,6L1.3,6C0.6,6,0,6.6,0,7.3l0,21.3C0,29.4,0.6,30,1.3,30l21.3,0c0.7,0,1.3-0.6,1.3-1.3l0-21.3 C24,6.6,23.4,6,22.7,6z M23,28c0,0.6-0.5,1-1,1L2,29c-0.6,0-1-0.5-1-1V8c0-0.6,0.5-1,1-1l20,0c0.6,0,1,0.5,1,1V28z"></path><path d="M23,0H1C0.4,0,0,0.4,0,1v3c0,0.5,0.4,1,1,1h10l1,1l1-1h10c0.5,0,1-0.4,1-1V1C24,0.4,23.6,0,23,0z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="frame" value="ribbon-bottom" checked="checked"> <svg width="50" height="50" viewBox="0 0 24 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24,21h-1.7V1.7H1.7V21H0l1,2l-1,2h1v2h22v-2h1l-1-2L24,21z M2,2h20v19v1H2v-1V2z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="frame" value="ribbon-top" checked="checked"> <svg width="50" height="50" viewBox="0 0 24 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0,6h1.7v19.3h20.7V6H24l-1-2l1-2h-1V0H1v2H0l1,2L0,6z M22,25H2V6V5h20v1V25z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="frame" value="phone" checked="checked"> <svg width="50" height="50" viewBox="0 0 24 25.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.6,0H6.4c-1,0-1.8,0.8-1.8,1.8v20.4c0,1,0.8,1.8,1.8,1.8h11.1c1,0,1.8-0.8,1.8-1.8V1.8C19.4,0.8,18.6,0,17.6,0z M11.2,2.3h2.7c0.1,0,0.2,0.1,0.2,0.2S14,2.7,13.9,2.7h-2.7c-0.1,0-0.2-0.1-0.2-0.2S11.1,2.3,11.2,2.3z M10.1,2.3 c0.1,0,0.2,0.1,0.2,0.2s-0.1,0.2-0.2,0.2c-0.1,0-0.2-0.1-0.2-0.2S10,2.3,10.1,2.3z M19,19H5V5h14V19z"></path></svg></label> <label class="btn btn-light p-2 hoversquares" style="margin-bottom: 5px;"><input type="radio" name="frame" value="cine" checked="checked"> <svg width="50" height="50" viewBox="0 0 24 23.9" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4.5,4.5L4.5,4.5L4.5,4.5l0,17.2c0,0.3,0.3,0.6,0.6,0.6h13.8c0.3,0,0.6-0.3,0.6-0.6V4.5H4.5z M19,18.6
+           c0,0.2-0.2,0.4-0.4,0.4H5.4C5.2,19,5,18.8,5,18.6V5.4C5,5.2,5.2,5,5.4,5h13.1C18.8,5,19,5.2,19,5.4V18.6z"></path><path d="M19.1,0.1L4.2,1.7l0.3,2.8l14.9-1.6L19.1,0.1z M6.8,3.8L4.9,4l1.7-2.1l1.9-0.2L6.8,3.8z M10.5,3.4L8.6,3.6l1.7-2.1l1.9-0.2 L10.5,3.4z M14.2,3l-1.9,0.2L14,1.1l1.9-0.2L14.2,3z M18,2.6l-1.9,0.2l1.7-2.1l0.9-0.1l0.1,0.9L18,2.6z"></path></svg></label></div></div> <div class="row form-group"><div class="col-6"><label>Frame Phrase</label> <input type="text" name="framelabel" required="required" class="form-control" style="box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 30px;"></div> <div class="col-6"><label>Phrase Font</label> <select name="label_font" class="custom-select"><option value="Arial, Helvetica, sans-serif" style="font-family: Arial, Helvetica, sans-serif;">
+                                             Sans-Serif
+                                         </option> <option value="&#39;Times New Roman&#39;, Times, serif" style="font-family: &quot;Times New Roman&quot;, Times, serif;">
+                                             Serif
+                                         </option> <option value="&#39;Courier New&#39;, Courier, monospace" style="font-family: &quot;Courier New&quot;, Courier, monospace;">
+                                             Monospace
+                                         </option></select></div> <div class="col-12" style="margin-top: 20px;"><label>Frame Color</label> <div><input class="form-control fg-color" style="box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 30px; border-radius: unset; width: 70%; display: inline-block;"> <input type="color" style="width: 19%; height: 35px; top: 5px; display: inline-block; position: relative; border: 0.1rem solid rgb(227, 236, 242); background: rgb(255, 255, 255);"></div></div></div></div></div></div></div></div></div></div></div> <span id="errortype2" class="small erroresalmedio" style="display: none; color: rgb(237, 80, 79); text-align: center; margin-bottom: 15px;">Something went wrong. Try again or contact us at support@qr.io.</span></div> <div class="col-4 col-mobile"><div class="quetesiga"><div class="resultholder" style="background: rgb(255, 255, 255); border: 1px solid rgb(221, 225, 237); width: 350px;"><button style="float: right; padding: 7px; margin: 10px; background: rgba(103, 214, 180, 0.32); border-radius: 6px; color: rgb(18, 170, 124); border: none;"><i class="fas fa-save"></i> Saved Designs</button> <!----> <div style="margin: 0px auto; text-align: center;"><a style="cursor: initial;"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" style="max-width: 100%;height: auto;" width="1023" height="1023" viewBox="0 0 1023 1023">
+<defs><mask id="qrmask"><g fill="#ffffff"><g>
+<g transform="translate(310,62) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,62) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,62) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,62) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,62) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,62) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,93) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,93) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,93) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,93) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,93) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,93) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,93) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,93) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,124) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,124) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(465,124) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,124) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,124) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,124) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,124) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,124) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,155) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,155) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(465,155) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,155) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,155) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,155) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,186) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,186) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,186) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,186) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,186) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,186) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,217) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,217) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,217) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,217) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,217) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,248) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,248) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,248) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,248) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,248) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,248) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,248) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,279) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,279) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,279) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,279) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,279) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,279) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,279) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(124,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(155,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(186,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(248,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(775,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(868,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(899,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(930,310) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(62,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(93,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(775,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(930,341) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(62,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(93,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(124,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(217,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(248,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(279,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,372) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(124,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(155,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(186,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(465,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(899,403) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(93,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(124,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(155,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(186,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(217,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(248,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(279,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(775,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(868,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(899,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(930,434) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(62,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(93,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(124,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(155,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(186,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(217,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(279,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(899,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(930,465) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(62,496) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(248,496) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(279,496) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,496) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,496) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,496) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,496) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,496) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,496) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,496) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(775,496) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(124,527) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,527) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,527) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,527) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,527) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,527) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,527) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,527) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,527) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,527) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(930,527) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(62,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(155,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(248,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(465,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(868,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(930,558) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(62,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(124,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(155,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(186,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(279,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(775,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(899,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(930,589) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(62,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(124,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(155,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(186,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(217,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(248,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(775,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,620) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(62,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(155,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(186,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(217,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(775,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(930,651) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(62,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(155,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(186,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(217,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(248,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(465,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(775,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(868,682) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,713) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,713) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,713) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,713) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,713) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,713) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,713) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,713) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,713) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(899,713) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(930,713) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,744) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,744) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(465,744) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,744) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,744) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,744) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,744) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,744) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,744) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,775) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(465,775) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,775) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,775) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,775) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,775) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,775) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,775) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(930,775) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(558,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(775,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(868,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(899,806) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,837) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,837) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,837) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,837) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,837) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,837) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,837) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(775,837) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(310,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(434,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(465,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(682,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(744,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(775,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(837,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(868,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(899,868) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,899) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(403,899) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,899) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(589,899) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,899) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,899) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,899) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(899,899) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(341,930) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(372,930) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(465,930) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(496,930) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(527,930) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(620,930) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(651,930) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(713,930) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(806,930) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+<g transform="translate(868,930) scale(5.3216666666667)"><circle cx="3" cy="3" r="3"></circle></g>
+</g></g></mask></defs>
+<rect width="1023" height="1023" fill="#ffffff" x="0" y="0"></rect>
+<rect x="0" y="0" width="1023" height="1023" mask="url(#qrmask)" fill="#000000"></rect>
+<g><g transform="translate(62,62)" fill="#000000"><g transform="scale(15.5)"><path d="M0,0v14h14V0H0z M12,12H2V2h10V12z"></path></g></g>
+<g transform="translate(124,124)" fill="#000000"><g transform="scale(15.5)"><rect width="6" height="6"></rect></g></g>
+<g transform="translate(744,62)" fill="#000000"><g transform="scale(15.5)"><path d="M0,0v14h14V0H0z M12,12H2V2h10V12z"></path></g></g>
+<g transform="translate(806,124)" fill="#000000"><g transform="scale(15.5)"><rect width="6" height="6"></rect></g></g>
+<g transform="translate(62,744)" fill="#000000"><g transform="scale(15.5)"><path d="M0,0v14h14V0H0z M12,12H2V2h10V12z"></path></g></g>
+<g transform="translate(124,806)" fill="#000000"><g transform="scale(15.5)"><rect width="6" height="6"></rect></g></g></g>
+</svg></a></div></div></div></div> <!----> <div class="modal" style="display: block !important; background: rgba(147, 152, 165, 0.35); overflow: auto;"><div role="document" class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header mx-auto"><p class="lead mb-0">Saved Designs</p> <button type="button" class="close ml-auto" style="position: absolute; right: 21px;"><span>×</span></button></div> <div class="modal-body"><div><center><button style="padding: 7px; margin: 10px; background: rgba(103, 214, 180, 0.32); border-radius: 6px; color: rgb(18, 170, 124); border: none;"><i class="fas fa-save"></i> Save Current Design</button></center></div> <div style="display: inline-block; margin: 0px 10px;"><a><!----> <img src="https://saved-designs.s3.amazonaws.com/127007.svg?1664294002336" style="display: block; width: 74px;"></a> <button style="padding: 7px; margin: 0px; background: rgba(214, 103, 103, 0.32); color: rgb(170, 18, 18); border: none;"><i class="fas fa-trash-alt"></i>Delete</button></div></div></div></div></div></div></div> <div style="height: 67px;"><div style="position: fixed; bottom: 0px; width: 100%; text-align: center; padding: 10px; background: rgb(255, 255, 255); color: rgb(255, 255, 255); z-index: 999999; box-shadow: rgba(86, 86, 86, 0.08) 0px -3px 5px 0px;"><div class="container"><div class="col-8 col-desktop colizq"><button class="btn btn-primary font-weight-bold animate-up-2 solomobile" style="display: none; float: left; margin-left: 12px;">Preview<i class="fas fa-qrcode" style="margin: 6px !important;"></i></button> <button class="btn btn-primary font-weight-bold animate-up-2" style="width: 139px; float: right; margin-right: -4px;">Save<i class="fas fa-arrow-right" style="margin: 6px !important;"></i></button></div></div></div></div></section></div></div> <!----> <div data-v-3f1ba458="" id="tucutucupampam"><!----></div></div>
+    <script src="./qrcode2_files/build.js.download"></script>
+  
+
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><div id="torrent-scanner-popup" style="display: none;"></div></body></html>

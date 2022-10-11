@@ -1,0 +1,13 @@
+ <div class="card">
+                <img src="./img/boxmodel.png" alt="comunicado" />
+                <h3>comunicado um</h3>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting
+                </p>
+                <a
+                  href="https://www.facebook.com/photo/?fbid=1239072313328149&set=a.116439548924770"
+                  target="-blank"
+                  class="Botao"
+                  >Saiba mais</a
+                >
+              </div>

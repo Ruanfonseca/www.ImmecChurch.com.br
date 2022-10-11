@@ -1,0 +1,548 @@
+/*Folha de estilo do site one page - @autor Ruanfonseca desenvolvedor*/
+/*Foi utilizado media queries partindo do smartphone em modo portrait*/
+/*importando do google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Righteous&family=Sarala:wght@700&display=swap');
+
+/*CSS reset */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    scroll-behavior: smooth;/*rolagem suave da página*/
+}
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    /*16px*/
+}
+
+.parallax{
+    background: url(img/fundo_Worship.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/*layout*/
+.container {
+    margin: 0 auto;
+}
+
+.container img {
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.Flex {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.Flex3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.Flex4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Flex5 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.Flex6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Botao {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1.3em;
+    font-weight: 500;
+    background-color: #c00000;
+    padding: 5px 20px;
+    border: 2px solid #ffff;
+    border-radius: 25px;
+}
+
+.Princi {
+    height: 100vh;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+
+.Princi2 {
+    box-shadow: 0 1px 2px #0003;
+    width: 100%;
+}
+
+.swiper {
+    height: 800px;
+    
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*topo do site*/
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+/*cartoes*/
+.card {
+    margin-top: 0px;
+    margin-bottom: 0;
+    width: 338px;
+    height: 460px;
+    background-color: #e8e8e8;
+    border: 1px solid #a1a1a1;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.card img {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.card h3 {
+    margin-top: 5px;
+}
+
+.card p {
+    text-align: left;
+    color: #434343;
+    padding: 10px 30px 50px 30px;
+}
+
+.card a {
+    padding: 10px 100px;
+    border: 0;
+}
+
+/*SmartPhone Portrait-------------------------------------*/
+/*cabeçalho*/
+header {
+    height: 60px;
+}
+
+.container img {
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+#logo img {
+    width: 128px;
+    height: 128px;
+}
+
+#check {
+    display: none;
+
+}
+
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0, 0, 0, 0.5);
+
+}
+
+nav ul {
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    /*define a altura do menu para diferentes telas*/
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.8;
+}
+
+#check:checked~ul {
+    right: 0;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+main {
+    height: 75vh;
+    background: url(./img/tela_de_fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 1.8em;
+}
+
+main h2 {
+    font-size: 0.5em;
+    margin: 20px 0 px 50px 0px;
+}
+
+/*PDF*/
+#ArquivoPdf {
+    padding: 50px 0px;
+    background: url(./img/fundo_Worship.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#textoPDF {
+    color: #fff;
+    padding: 0px 10px;
+}
+
+#textoPDF h2 {
+    margin-bottom: 10px;
+}
+
+#textoPDF p {
+    margin-bottom: 40px;
+}
+
+#textoPDF span {
+    display: none;
+}
+
+#qrCode {
+    display: none;
+}
+
+/*Sobre*/
+#sobre {
+    padding: 50px 0px;
+    background: url(img/fundo_Worship.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#destaque {
+    display: none;
+}
+
+#textosobre {
+    color: #fff;
+    padding: 0px 10px;
+}
+
+#textosobre h2 {
+    margin-bottom: 10px;
+}
+
+.topicosSobre {
+    margin-top: 20px;
+}
+
+.topicosSobre img {
+    margin-right: 10px;
+}
+
+/*One Page*/
+#onePage {
+    padding: 50px 10px;
+}
+
+#onePage h2 {
+    margin-bottom: 10px;
+}
+
+#onePage p {
+    margin-bottom: 25px;
+}
+
+#video iframe {
+    width: 340px;
+    height: 191px;
+    border: 0;
+}
+
+/*conteudo*/
+#conteudo {
+    padding: 50px 0px;
+}
+
+#conteudo h2 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#todos {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#todos a {
+    text-decoration: none;
+    color: #000;
+    font-size: 700;
+    font-size: 1.5em;
+}
+
+address {
+    padding: 35px 10px 50px 10px;
+    background: url(./img/tela_de_fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+address a {
+    text-decoration: none;
+    color: #fff;
+}
+
+address img {
+    padding-top: 15px;
+}
+
+#iconeLocal {
+    display: none;
+}
+
+#dados {
+    margin: 30px 0px 15px 0px;
+}
+
+#googlemaps {
+    display: none;
+}
+
+footer {
+    padding: 50px;
+    background-color: #434343;
+    color: #fff;
+    text-align: center;
+}
+
+#social {
+    margin-bottom: 25px;
+}
+
+/*SmartPhone LandScape-------------------------------------*/
+@media (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .container img {
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+
+    /*destaque*/
+    main h1,
+    main h2 {
+        text-shadow: #000 0.05em 0.05em 0.05em;
+    }
+
+    /*one page*/
+    #video iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    /*rodapé*/
+    .Flex5 {
+        flex-direction: line;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #social {
+        margin: 0;
+    }
+}
+
+/*Tablet Portrait -------------------------------------*/
+@media (min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .container img {
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+
+    /*destque*/
+    main {
+        height: 45vh;
+    }
+
+    main h1 {
+        font-size: 3.0em;
+    }
+
+    main h2 {
+        font-size: 2em;
+    }    
+}
+
+/*Tablet Landscape -------------------------------------*/
+@media (min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .container img {
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+
+    main {
+        height: 70vh;
+    }
+}
+
+/*PC -------------------------------------*/
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+
+    /*cabeçalho*/
+    header {
+        height: 120px;
+    }
+
+    #logo img {
+        width: 189px;
+        height: 189px;
+        margin-top: 30px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: #343538;
+    }
+
+    nav ul li a:hover {
+        color: #c00000;
+    }
+
+    /*sobre*/
+    #sobre {
+        background-attachment: fixed;
+    }
+
+    #destaque {
+        display: inline;
+    }
+
+    #destaque img {
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+
+    .container img {
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+
+    /*one page*/
+    #video iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    .Flex3 {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /*arquivopdf*/
+    #ArquivoPdf {
+        background-attachment: fixed;
+    }
+
+    #ArquivoPdf span {
+        display: inline;
+    }
+
+    #qrCode {
+        display: inline;
+    }
+
+    #qrCode img {
+        width: 225px;
+        height: 225px;
+    }
+
+    /*rodapé*/
+    #iconeLocal {
+        display: inline;
+    }
+
+    #iconeMapa {
+        display: none;
+    }
+
+    #googlemaps {
+        display: inline;
+    }
+
+    .Flex6 {
+        flex-direction: row-reverse;
+    }
+}
